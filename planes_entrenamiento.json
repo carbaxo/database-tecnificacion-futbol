@@ -1,0 +1,1656 @@
+{
+  "version": "1.0",
+  "idioma": "es",
+  "frecuencia": "3 días por semana",
+  "duraciones_disponibles_min": [
+    30,
+    60
+  ],
+  "total_planes": 12,
+  "planes": [
+    {
+      "id": "SOLO-INICIACION-30",
+      "nombre": "Individual · iniciación · 30 min",
+      "jugadores": 1,
+      "nivel": "iniciación",
+      "dias_semana": 3,
+      "duracion_sesion_min": 30,
+      "duracion_programa_semanas": 4,
+      "progresion_semanal": [
+        "Semana 1: ejecución limpia y ritmo moderado.",
+        "Semana 2: aumenta la velocidad sin perder precisión.",
+        "Semana 3: prioriza el pie menos hábil y reduce toques.",
+        "Semana 4: registra tiempos, aciertos y mejor marca."
+      ],
+      "sesiones": [
+        {
+          "dia": 1,
+          "titulo": "Dominio y conducción",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-13",
+              "minutos": 9,
+              "descripcion": "V con la planta"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-02",
+              "minutos": 9,
+              "descripcion": "Ocho entre conos"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 2,
+          "titulo": "Pase y primer control",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-04",
+              "minutos": 9,
+              "descripcion": "Puertas de precisión"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-05",
+              "minutos": 9,
+              "descripcion": "Control orientado 180°"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 3,
+          "titulo": "Giros y finalización",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-03",
+              "minutos": 9,
+              "descripcion": "Cuadrado de giros"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-09",
+              "minutos": 9,
+              "descripcion": "Y de cambios de ritmo"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SOLO-INICIACION-60",
+      "nombre": "Individual · iniciación · 60 min",
+      "jugadores": 1,
+      "nivel": "iniciación",
+      "dias_semana": 3,
+      "duracion_sesion_min": 60,
+      "duracion_programa_semanas": 4,
+      "progresion_semanal": [
+        "Semana 1: ejecución limpia y ritmo moderado.",
+        "Semana 2: aumenta la velocidad sin perder precisión.",
+        "Semana 3: prioriza el pie menos hábil y reduce toques.",
+        "Semana 4: registra tiempos, aciertos y mejor marca."
+      ],
+      "sesiones": [
+        {
+          "dia": 1,
+          "titulo": "Dominio y conducción",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-13",
+              "minutos": 10,
+              "descripcion": "V con la planta"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-02",
+              "minutos": 10,
+              "descripcion": "Ocho entre conos"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-01",
+              "minutos": 10,
+              "descripcion": "Conducción en slalom"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-07",
+              "minutos": 10,
+              "descripcion": "Escalera de dominio"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 2,
+          "titulo": "Pase y primer control",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-04",
+              "minutos": 10,
+              "descripcion": "Puertas de precisión"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-05",
+              "minutos": 10,
+              "descripcion": "Control orientado 180°"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-17",
+              "minutos": 10,
+              "descripcion": "Pared a un toque"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-10",
+              "minutos": 10,
+              "descripcion": "Primer toque por colores"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 3,
+          "titulo": "Giros y finalización",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-03",
+              "minutos": 10,
+              "descripcion": "Cuadrado de giros"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-09",
+              "minutos": 10,
+              "descripcion": "Y de cambios de ritmo"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-08",
+              "minutos": 10,
+              "descripcion": "Finalización tras recorte"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-20",
+              "minutos": 10,
+              "descripcion": "Finalización con ambos pies"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SOLO-INTERMEDIO-30",
+      "nombre": "Individual · intermedio · 30 min",
+      "jugadores": 1,
+      "nivel": "intermedio",
+      "dias_semana": 3,
+      "duracion_sesion_min": 30,
+      "duracion_programa_semanas": 4,
+      "progresion_semanal": [
+        "Semana 1: ejecución limpia y ritmo moderado.",
+        "Semana 2: aumenta la velocidad sin perder precisión.",
+        "Semana 3: prioriza el pie menos hábil y reduce toques.",
+        "Semana 4: registra tiempos, aciertos y mejor marca."
+      ],
+      "sesiones": [
+        {
+          "dia": 1,
+          "titulo": "Cambios de dirección",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-06",
+              "minutos": 9,
+              "descripcion": "Rombo técnico"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-11",
+              "minutos": 9,
+              "descripcion": "Protección y giro"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 2,
+          "titulo": "Precisión y reacción",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-04",
+              "minutos": 9,
+              "descripcion": "Puertas de precisión"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-05",
+              "minutos": 9,
+              "descripcion": "Control orientado 180°"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 3,
+          "titulo": "Circuito y tiro",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-08",
+              "minutos": 9,
+              "descripcion": "Finalización tras recorte"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-09",
+              "minutos": 9,
+              "descripcion": "Y de cambios de ritmo"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SOLO-INTERMEDIO-60",
+      "nombre": "Individual · intermedio · 60 min",
+      "jugadores": 1,
+      "nivel": "intermedio",
+      "dias_semana": 3,
+      "duracion_sesion_min": 60,
+      "duracion_programa_semanas": 4,
+      "progresion_semanal": [
+        "Semana 1: ejecución limpia y ritmo moderado.",
+        "Semana 2: aumenta la velocidad sin perder precisión.",
+        "Semana 3: prioriza el pie menos hábil y reduce toques.",
+        "Semana 4: registra tiempos, aciertos y mejor marca."
+      ],
+      "sesiones": [
+        {
+          "dia": 1,
+          "titulo": "Cambios de dirección",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-06",
+              "minutos": 10,
+              "descripcion": "Rombo técnico"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-11",
+              "minutos": 10,
+              "descripcion": "Protección y giro"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-14",
+              "minutos": 10,
+              "descripcion": "Recorrido en L"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-18",
+              "minutos": 10,
+              "descripcion": "Doble finta corporal"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 2,
+          "titulo": "Precisión y reacción",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-04",
+              "minutos": 10,
+              "descripcion": "Puertas de precisión"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-05",
+              "minutos": 10,
+              "descripcion": "Control orientado 180°"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-15",
+              "minutos": 10,
+              "descripcion": "Caza de puertas"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-17",
+              "minutos": 10,
+              "descripcion": "Pared a un toque"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 3,
+          "titulo": "Circuito y tiro",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-08",
+              "minutos": 10,
+              "descripcion": "Finalización tras recorte"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-09",
+              "minutos": 10,
+              "descripcion": "Y de cambios de ritmo"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-12",
+              "minutos": 10,
+              "descripcion": "Circuito técnico completo"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-20",
+              "minutos": 10,
+              "descripcion": "Finalización con ambos pies"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SOLO-AVANZADO-30",
+      "nombre": "Individual · avanzado · 30 min",
+      "jugadores": 1,
+      "nivel": "avanzado",
+      "dias_semana": 3,
+      "duracion_sesion_min": 30,
+      "duracion_programa_semanas": 4,
+      "progresion_semanal": [
+        "Semana 1: ejecución limpia y ritmo moderado.",
+        "Semana 2: aumenta la velocidad sin perder precisión.",
+        "Semana 3: prioriza el pie menos hábil y reduce toques.",
+        "Semana 4: registra tiempos, aciertos y mejor marca."
+      ],
+      "sesiones": [
+        {
+          "dia": 1,
+          "titulo": "Velocidad técnica",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-10",
+              "minutos": 9,
+              "descripcion": "Primer toque por colores"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-17",
+              "minutos": 9,
+              "descripcion": "Pared a un toque"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 2,
+          "titulo": "Regate bajo fatiga",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-12",
+              "minutos": 9,
+              "descripcion": "Circuito técnico completo"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-15",
+              "minutos": 9,
+              "descripcion": "Caza de puertas"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 3,
+          "titulo": "Finalización exigente",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-20",
+              "minutos": 9,
+              "descripcion": "Finalización con ambos pies"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-08",
+              "minutos": 9,
+              "descripcion": "Finalización tras recorte"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SOLO-AVANZADO-60",
+      "nombre": "Individual · avanzado · 60 min",
+      "jugadores": 1,
+      "nivel": "avanzado",
+      "dias_semana": 3,
+      "duracion_sesion_min": 60,
+      "duracion_programa_semanas": 4,
+      "progresion_semanal": [
+        "Semana 1: ejecución limpia y ritmo moderado.",
+        "Semana 2: aumenta la velocidad sin perder precisión.",
+        "Semana 3: prioriza el pie menos hábil y reduce toques.",
+        "Semana 4: registra tiempos, aciertos y mejor marca."
+      ],
+      "sesiones": [
+        {
+          "dia": 1,
+          "titulo": "Velocidad técnica",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-10",
+              "minutos": 10,
+              "descripcion": "Primer toque por colores"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-17",
+              "minutos": 10,
+              "descripcion": "Pared a un toque"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-19",
+              "minutos": 10,
+              "descripcion": "Giros explosivos 4x4"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-16",
+              "minutos": 10,
+              "descripcion": "Circuito de pierna débil"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 2,
+          "titulo": "Regate bajo fatiga",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-12",
+              "minutos": 10,
+              "descripcion": "Circuito técnico completo"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-15",
+              "minutos": 10,
+              "descripcion": "Caza de puertas"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-18",
+              "minutos": 10,
+              "descripcion": "Doble finta corporal"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-06",
+              "minutos": 10,
+              "descripcion": "Rombo técnico"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 3,
+          "titulo": "Finalización exigente",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-20",
+              "minutos": 10,
+              "descripcion": "Finalización con ambos pies"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-08",
+              "minutos": 10,
+              "descripcion": "Finalización tras recorte"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-11",
+              "minutos": 10,
+              "descripcion": "Protección y giro"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "IND-03",
+              "minutos": 10,
+              "descripcion": "Cuadrado de giros"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PAREJA-INICIACION-30",
+      "nombre": "Pareja · iniciación · 30 min",
+      "jugadores": 2,
+      "nivel": "iniciación",
+      "dias_semana": 3,
+      "duracion_sesion_min": 30,
+      "duracion_programa_semanas": 4,
+      "progresion_semanal": [
+        "Semana 1: ejecución limpia y ritmo moderado.",
+        "Semana 2: aumenta la velocidad sin perder precisión.",
+        "Semana 3: prioriza el pie menos hábil y reduce toques.",
+        "Semana 4: registra tiempos, aciertos y mejor marca."
+      ],
+      "sesiones": [
+        {
+          "dia": 1,
+          "titulo": "Pase y apoyo",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-02",
+              "minutos": 9,
+              "descripcion": "Pases a dos toques"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-06",
+              "minutos": 9,
+              "descripcion": "Pase entre puertas"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 2,
+          "titulo": "Control orientado",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-04",
+              "minutos": 9,
+              "descripcion": "Control cruzado"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-10",
+              "minutos": 9,
+              "descripcion": "Reacción por dos puertas"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 3,
+          "titulo": "Movimiento tras pase",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-03",
+              "minutos": 9,
+              "descripcion": "Pared y devolución"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-08",
+              "minutos": 9,
+              "descripcion": "Desmarque en diagonal"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PAREJA-INICIACION-60",
+      "nombre": "Pareja · iniciación · 60 min",
+      "jugadores": 2,
+      "nivel": "iniciación",
+      "dias_semana": 3,
+      "duracion_sesion_min": 60,
+      "duracion_programa_semanas": 4,
+      "progresion_semanal": [
+        "Semana 1: ejecución limpia y ritmo moderado.",
+        "Semana 2: aumenta la velocidad sin perder precisión.",
+        "Semana 3: prioriza el pie menos hábil y reduce toques.",
+        "Semana 4: registra tiempos, aciertos y mejor marca."
+      ],
+      "sesiones": [
+        {
+          "dia": 1,
+          "titulo": "Pase y apoyo",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-02",
+              "minutos": 10,
+              "descripcion": "Pases a dos toques"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-06",
+              "minutos": 10,
+              "descripcion": "Pase entre puertas"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-01",
+              "minutos": 10,
+              "descripcion": "Pase y sigue triangular"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-14",
+              "minutos": 10,
+              "descripcion": "Reloj de pases"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 2,
+          "titulo": "Control orientado",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-04",
+              "minutos": 10,
+              "descripcion": "Control cruzado"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-10",
+              "minutos": 10,
+              "descripcion": "Reacción por dos puertas"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-15",
+              "minutos": 10,
+              "descripcion": "Control aéreo y apoyo"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-20",
+              "minutos": 10,
+              "descripcion": "Primer toque alterno"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 3,
+          "titulo": "Movimiento tras pase",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-03",
+              "minutos": 10,
+              "descripcion": "Pared y devolución"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-08",
+              "minutos": 10,
+              "descripcion": "Desmarque en diagonal"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-11",
+              "minutos": 10,
+              "descripcion": "Pases en movimiento paralelo"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-13",
+              "minutos": 10,
+              "descripcion": "Pase y doblaje"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PAREJA-INTERMEDIO-30",
+      "nombre": "Pareja · intermedio · 30 min",
+      "jugadores": 2,
+      "nivel": "intermedio",
+      "dias_semana": 3,
+      "duracion_sesion_min": 30,
+      "duracion_programa_semanas": 4,
+      "progresion_semanal": [
+        "Semana 1: ejecución limpia y ritmo moderado.",
+        "Semana 2: aumenta la velocidad sin perder precisión.",
+        "Semana 3: prioriza el pie menos hábil y reduce toques.",
+        "Semana 4: registra tiempos, aciertos y mejor marca."
+      ],
+      "sesiones": [
+        {
+          "dia": 1,
+          "titulo": "Pared y desmarque",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-13",
+              "minutos": 9,
+              "descripcion": "Pase y doblaje"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-03",
+              "minutos": 9,
+              "descripcion": "Pared y devolución"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 2,
+          "titulo": "Control y precisión",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-04",
+              "minutos": 9,
+              "descripcion": "Control cruzado"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-10",
+              "minutos": 9,
+              "descripcion": "Reacción por dos puertas"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 3,
+          "titulo": "Asistencia y tiro",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-09",
+              "minutos": 9,
+              "descripcion": "Finalización con asistencia"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-12",
+              "minutos": 9,
+              "descripcion": "Combinación y tiro"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PAREJA-INTERMEDIO-60",
+      "nombre": "Pareja · intermedio · 60 min",
+      "jugadores": 2,
+      "nivel": "intermedio",
+      "dias_semana": 3,
+      "duracion_sesion_min": 60,
+      "duracion_programa_semanas": 4,
+      "progresion_semanal": [
+        "Semana 1: ejecución limpia y ritmo moderado.",
+        "Semana 2: aumenta la velocidad sin perder precisión.",
+        "Semana 3: prioriza el pie menos hábil y reduce toques.",
+        "Semana 4: registra tiempos, aciertos y mejor marca."
+      ],
+      "sesiones": [
+        {
+          "dia": 1,
+          "titulo": "Pared y desmarque",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-13",
+              "minutos": 10,
+              "descripcion": "Pase y doblaje"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-03",
+              "minutos": 10,
+              "descripcion": "Pared y devolución"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-08",
+              "minutos": 10,
+              "descripcion": "Desmarque en diagonal"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-18",
+              "minutos": 10,
+              "descripcion": "Pase al espacio"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 2,
+          "titulo": "Control y precisión",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-04",
+              "minutos": 10,
+              "descripcion": "Control cruzado"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-10",
+              "minutos": 10,
+              "descripcion": "Reacción por dos puertas"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-15",
+              "minutos": 10,
+              "descripcion": "Control aéreo y apoyo"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-20",
+              "minutos": 10,
+              "descripcion": "Primer toque alterno"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 3,
+          "titulo": "Asistencia y tiro",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-09",
+              "minutos": 10,
+              "descripcion": "Finalización con asistencia"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-12",
+              "minutos": 10,
+              "descripcion": "Combinación y tiro"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-19",
+              "minutos": 10,
+              "descripcion": "Pared, cruce y finalización"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-06",
+              "minutos": 10,
+              "descripcion": "Pase entre puertas"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PAREJA-AVANZADO-30",
+      "nombre": "Pareja · avanzado · 30 min",
+      "jugadores": 2,
+      "nivel": "avanzado",
+      "dias_semana": 3,
+      "duracion_sesion_min": 30,
+      "duracion_programa_semanas": 4,
+      "progresion_semanal": [
+        "Semana 1: ejecución limpia y ritmo moderado.",
+        "Semana 2: aumenta la velocidad sin perder precisión.",
+        "Semana 3: prioriza el pie menos hábil y reduce toques.",
+        "Semana 4: registra tiempos, aciertos y mejor marca."
+      ],
+      "sesiones": [
+        {
+          "dia": 1,
+          "titulo": "Protección y presión",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-07",
+              "minutos": 9,
+              "descripcion": "Rondo 1 contra 1 con apoyo"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-16",
+              "minutos": 9,
+              "descripcion": "Protección con oposición"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 2,
+          "titulo": "Velocidad de combinación",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-03",
+              "minutos": 9,
+              "descripcion": "Pared y devolución"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-13",
+              "minutos": 9,
+              "descripcion": "Pase y doblaje"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 3,
+          "titulo": "Finalización combinada",
+          "duracion_min": 30,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 5,
+              "descripcion": "Movilidad, activación y contactos libres con balón."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-09",
+              "minutos": 9,
+              "descripcion": "Finalización con asistencia"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-12",
+              "minutos": 9,
+              "descripcion": "Combinación y tiro"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 4,
+              "descripcion": "Repite el ejercicio más difícil intentando superar tu mejor marca."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 3,
+              "descripcion": "Conducción suave y movilidad."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PAREJA-AVANZADO-60",
+      "nombre": "Pareja · avanzado · 60 min",
+      "jugadores": 2,
+      "nivel": "avanzado",
+      "dias_semana": 3,
+      "duracion_sesion_min": 60,
+      "duracion_programa_semanas": 4,
+      "progresion_semanal": [
+        "Semana 1: ejecución limpia y ritmo moderado.",
+        "Semana 2: aumenta la velocidad sin perder precisión.",
+        "Semana 3: prioriza el pie menos hábil y reduce toques.",
+        "Semana 4: registra tiempos, aciertos y mejor marca."
+      ],
+      "sesiones": [
+        {
+          "dia": 1,
+          "titulo": "Protección y presión",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-07",
+              "minutos": 10,
+              "descripcion": "Rondo 1 contra 1 con apoyo"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-16",
+              "minutos": 10,
+              "descripcion": "Protección con oposición"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-17",
+              "minutos": 10,
+              "descripcion": "Desafío de puertas cronometrado"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-20",
+              "minutos": 10,
+              "descripcion": "Primer toque alterno"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 2,
+          "titulo": "Velocidad de combinación",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-03",
+              "minutos": 10,
+              "descripcion": "Pared y devolución"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-13",
+              "minutos": 10,
+              "descripcion": "Pase y doblaje"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-14",
+              "minutos": 10,
+              "descripcion": "Reloj de pases"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-18",
+              "minutos": 10,
+              "descripcion": "Pase al espacio"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        },
+        {
+          "dia": 3,
+          "titulo": "Finalización combinada",
+          "duracion_min": 60,
+          "bloques": [
+            {
+              "tipo": "calentamiento",
+              "minutos": 8,
+              "descripcion": "Movilidad, activación, conducción libre y ambos perfiles."
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-09",
+              "minutos": 10,
+              "descripcion": "Finalización con asistencia"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-12",
+              "minutos": 10,
+              "descripcion": "Combinación y tiro"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-19",
+              "minutos": 10,
+              "descripcion": "Pared, cruce y finalización"
+            },
+            {
+              "tipo": "ejercicio",
+              "ejercicio_id": "PAR-11",
+              "minutos": 10,
+              "descripcion": "Pases en movimiento paralelo"
+            },
+            {
+              "tipo": "reto",
+              "minutos": 7,
+              "descripcion": "Ronda cronometrada: máxima precisión manteniendo buena técnica."
+            },
+            {
+              "tipo": "vuelta_calma",
+              "minutos": 5,
+              "descripcion": "Toques suaves, respiración y movilidad."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+﻿plan_id,plan,jugadores,nivel,duracion_sesion_min,dia,objetivo_dia,orden,tipo,ejercicio_id,ejercicio,minutos,descripcion
+SOLO-INICIACION-30,Individual · iniciación · 30 min,1,iniciación,30,1,Dominio y conducción,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+SOLO-INICIACION-30,Individual · iniciación · 30 min,1,iniciación,30,1,Dominio y conducción,2,ejercicio,IND-13,V con la planta,9,V con la planta
+SOLO-INICIACION-30,Individual · iniciación · 30 min,1,iniciación,30,1,Dominio y conducción,3,ejercicio,IND-02,Ocho entre conos,9,Ocho entre conos
+SOLO-INICIACION-30,Individual · iniciación · 30 min,1,iniciación,30,1,Dominio y conducción,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+SOLO-INICIACION-30,Individual · iniciación · 30 min,1,iniciación,30,1,Dominio y conducción,5,vuelta_calma,,,3,Conducción suave y movilidad.
+SOLO-INICIACION-30,Individual · iniciación · 30 min,1,iniciación,30,2,Pase y primer control,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+SOLO-INICIACION-30,Individual · iniciación · 30 min,1,iniciación,30,2,Pase y primer control,2,ejercicio,IND-04,Puertas de precisión,9,Puertas de precisión
+SOLO-INICIACION-30,Individual · iniciación · 30 min,1,iniciación,30,2,Pase y primer control,3,ejercicio,IND-05,Control orientado 180°,9,Control orientado 180°
+SOLO-INICIACION-30,Individual · iniciación · 30 min,1,iniciación,30,2,Pase y primer control,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+SOLO-INICIACION-30,Individual · iniciación · 30 min,1,iniciación,30,2,Pase y primer control,5,vuelta_calma,,,3,Conducción suave y movilidad.
+SOLO-INICIACION-30,Individual · iniciación · 30 min,1,iniciación,30,3,Giros y finalización,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+SOLO-INICIACION-30,Individual · iniciación · 30 min,1,iniciación,30,3,Giros y finalización,2,ejercicio,IND-03,Cuadrado de giros,9,Cuadrado de giros
+SOLO-INICIACION-30,Individual · iniciación · 30 min,1,iniciación,30,3,Giros y finalización,3,ejercicio,IND-09,Y de cambios de ritmo,9,Y de cambios de ritmo
+SOLO-INICIACION-30,Individual · iniciación · 30 min,1,iniciación,30,3,Giros y finalización,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+SOLO-INICIACION-30,Individual · iniciación · 30 min,1,iniciación,30,3,Giros y finalización,5,vuelta_calma,,,3,Conducción suave y movilidad.
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,1,Dominio y conducción,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,1,Dominio y conducción,2,ejercicio,IND-13,V con la planta,10,V con la planta
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,1,Dominio y conducción,3,ejercicio,IND-02,Ocho entre conos,10,Ocho entre conos
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,1,Dominio y conducción,4,ejercicio,IND-01,Conducción en slalom,10,Conducción en slalom
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,1,Dominio y conducción,5,ejercicio,IND-07,Escalera de dominio,10,Escalera de dominio
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,1,Dominio y conducción,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,1,Dominio y conducción,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,2,Pase y primer control,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,2,Pase y primer control,2,ejercicio,IND-04,Puertas de precisión,10,Puertas de precisión
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,2,Pase y primer control,3,ejercicio,IND-05,Control orientado 180°,10,Control orientado 180°
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,2,Pase y primer control,4,ejercicio,IND-17,Pared a un toque,10,Pared a un toque
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,2,Pase y primer control,5,ejercicio,IND-10,Primer toque por colores,10,Primer toque por colores
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,2,Pase y primer control,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,2,Pase y primer control,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,3,Giros y finalización,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,3,Giros y finalización,2,ejercicio,IND-03,Cuadrado de giros,10,Cuadrado de giros
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,3,Giros y finalización,3,ejercicio,IND-09,Y de cambios de ritmo,10,Y de cambios de ritmo
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,3,Giros y finalización,4,ejercicio,IND-08,Finalización tras recorte,10,Finalización tras recorte
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,3,Giros y finalización,5,ejercicio,IND-20,Finalización con ambos pies,10,Finalización con ambos pies
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,3,Giros y finalización,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+SOLO-INICIACION-60,Individual · iniciación · 60 min,1,iniciación,60,3,Giros y finalización,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+SOLO-INTERMEDIO-30,Individual · intermedio · 30 min,1,intermedio,30,1,Cambios de dirección,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+SOLO-INTERMEDIO-30,Individual · intermedio · 30 min,1,intermedio,30,1,Cambios de dirección,2,ejercicio,IND-06,Rombo técnico,9,Rombo técnico
+SOLO-INTERMEDIO-30,Individual · intermedio · 30 min,1,intermedio,30,1,Cambios de dirección,3,ejercicio,IND-11,Protección y giro,9,Protección y giro
+SOLO-INTERMEDIO-30,Individual · intermedio · 30 min,1,intermedio,30,1,Cambios de dirección,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+SOLO-INTERMEDIO-30,Individual · intermedio · 30 min,1,intermedio,30,1,Cambios de dirección,5,vuelta_calma,,,3,Conducción suave y movilidad.
+SOLO-INTERMEDIO-30,Individual · intermedio · 30 min,1,intermedio,30,2,Precisión y reacción,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+SOLO-INTERMEDIO-30,Individual · intermedio · 30 min,1,intermedio,30,2,Precisión y reacción,2,ejercicio,IND-04,Puertas de precisión,9,Puertas de precisión
+SOLO-INTERMEDIO-30,Individual · intermedio · 30 min,1,intermedio,30,2,Precisión y reacción,3,ejercicio,IND-05,Control orientado 180°,9,Control orientado 180°
+SOLO-INTERMEDIO-30,Individual · intermedio · 30 min,1,intermedio,30,2,Precisión y reacción,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+SOLO-INTERMEDIO-30,Individual · intermedio · 30 min,1,intermedio,30,2,Precisión y reacción,5,vuelta_calma,,,3,Conducción suave y movilidad.
+SOLO-INTERMEDIO-30,Individual · intermedio · 30 min,1,intermedio,30,3,Circuito y tiro,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+SOLO-INTERMEDIO-30,Individual · intermedio · 30 min,1,intermedio,30,3,Circuito y tiro,2,ejercicio,IND-08,Finalización tras recorte,9,Finalización tras recorte
+SOLO-INTERMEDIO-30,Individual · intermedio · 30 min,1,intermedio,30,3,Circuito y tiro,3,ejercicio,IND-09,Y de cambios de ritmo,9,Y de cambios de ritmo
+SOLO-INTERMEDIO-30,Individual · intermedio · 30 min,1,intermedio,30,3,Circuito y tiro,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+SOLO-INTERMEDIO-30,Individual · intermedio · 30 min,1,intermedio,30,3,Circuito y tiro,5,vuelta_calma,,,3,Conducción suave y movilidad.
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,1,Cambios de dirección,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,1,Cambios de dirección,2,ejercicio,IND-06,Rombo técnico,10,Rombo técnico
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,1,Cambios de dirección,3,ejercicio,IND-11,Protección y giro,10,Protección y giro
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,1,Cambios de dirección,4,ejercicio,IND-14,Recorrido en L,10,Recorrido en L
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,1,Cambios de dirección,5,ejercicio,IND-18,Doble finta corporal,10,Doble finta corporal
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,1,Cambios de dirección,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,1,Cambios de dirección,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,2,Precisión y reacción,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,2,Precisión y reacción,2,ejercicio,IND-04,Puertas de precisión,10,Puertas de precisión
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,2,Precisión y reacción,3,ejercicio,IND-05,Control orientado 180°,10,Control orientado 180°
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,2,Precisión y reacción,4,ejercicio,IND-15,Caza de puertas,10,Caza de puertas
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,2,Precisión y reacción,5,ejercicio,IND-17,Pared a un toque,10,Pared a un toque
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,2,Precisión y reacción,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,2,Precisión y reacción,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,3,Circuito y tiro,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,3,Circuito y tiro,2,ejercicio,IND-08,Finalización tras recorte,10,Finalización tras recorte
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,3,Circuito y tiro,3,ejercicio,IND-09,Y de cambios de ritmo,10,Y de cambios de ritmo
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,3,Circuito y tiro,4,ejercicio,IND-12,Circuito técnico completo,10,Circuito técnico completo
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,3,Circuito y tiro,5,ejercicio,IND-20,Finalización con ambos pies,10,Finalización con ambos pies
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,3,Circuito y tiro,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,3,Circuito y tiro,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+SOLO-AVANZADO-30,Individual · avanzado · 30 min,1,avanzado,30,1,Velocidad técnica,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+SOLO-AVANZADO-30,Individual · avanzado · 30 min,1,avanzado,30,1,Velocidad técnica,2,ejercicio,IND-10,Primer toque por colores,9,Primer toque por colores
+SOLO-AVANZADO-30,Individual · avanzado · 30 min,1,avanzado,30,1,Velocidad técnica,3,ejercicio,IND-17,Pared a un toque,9,Pared a un toque
+SOLO-AVANZADO-30,Individual · avanzado · 30 min,1,avanzado,30,1,Velocidad técnica,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+SOLO-AVANZADO-30,Individual · avanzado · 30 min,1,avanzado,30,1,Velocidad técnica,5,vuelta_calma,,,3,Conducción suave y movilidad.
+SOLO-AVANZADO-30,Individual · avanzado · 30 min,1,avanzado,30,2,Regate bajo fatiga,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+SOLO-AVANZADO-30,Individual · avanzado · 30 min,1,avanzado,30,2,Regate bajo fatiga,2,ejercicio,IND-12,Circuito técnico completo,9,Circuito técnico completo
+SOLO-AVANZADO-30,Individual · avanzado · 30 min,1,avanzado,30,2,Regate bajo fatiga,3,ejercicio,IND-15,Caza de puertas,9,Caza de puertas
+SOLO-AVANZADO-30,Individual · avanzado · 30 min,1,avanzado,30,2,Regate bajo fatiga,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+SOLO-AVANZADO-30,Individual · avanzado · 30 min,1,avanzado,30,2,Regate bajo fatiga,5,vuelta_calma,,,3,Conducción suave y movilidad.
+SOLO-AVANZADO-30,Individual · avanzado · 30 min,1,avanzado,30,3,Finalización exigente,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+SOLO-AVANZADO-30,Individual · avanzado · 30 min,1,avanzado,30,3,Finalización exigente,2,ejercicio,IND-20,Finalización con ambos pies,9,Finalización con ambos pies
+SOLO-AVANZADO-30,Individual · avanzado · 30 min,1,avanzado,30,3,Finalización exigente,3,ejercicio,IND-08,Finalización tras recorte,9,Finalización tras recorte
+SOLO-AVANZADO-30,Individual · avanzado · 30 min,1,avanzado,30,3,Finalización exigente,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+SOLO-AVANZADO-30,Individual · avanzado · 30 min,1,avanzado,30,3,Finalización exigente,5,vuelta_calma,,,3,Conducción suave y movilidad.
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,1,Velocidad técnica,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,1,Velocidad técnica,2,ejercicio,IND-10,Primer toque por colores,10,Primer toque por colores
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,1,Velocidad técnica,3,ejercicio,IND-17,Pared a un toque,10,Pared a un toque
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,1,Velocidad técnica,4,ejercicio,IND-19,Giros explosivos 4x4,10,Giros explosivos 4x4
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,1,Velocidad técnica,5,ejercicio,IND-16,Circuito de pierna débil,10,Circuito de pierna débil
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,1,Velocidad técnica,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,1,Velocidad técnica,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,2,Regate bajo fatiga,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,2,Regate bajo fatiga,2,ejercicio,IND-12,Circuito técnico completo,10,Circuito técnico completo
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,2,Regate bajo fatiga,3,ejercicio,IND-15,Caza de puertas,10,Caza de puertas
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,2,Regate bajo fatiga,4,ejercicio,IND-18,Doble finta corporal,10,Doble finta corporal
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,2,Regate bajo fatiga,5,ejercicio,IND-06,Rombo técnico,10,Rombo técnico
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,2,Regate bajo fatiga,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,2,Regate bajo fatiga,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,3,Finalización exigente,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,3,Finalización exigente,2,ejercicio,IND-20,Finalización con ambos pies,10,Finalización con ambos pies
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,3,Finalización exigente,3,ejercicio,IND-08,Finalización tras recorte,10,Finalización tras recorte
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,3,Finalización exigente,4,ejercicio,IND-11,Protección y giro,10,Protección y giro
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,3,Finalización exigente,5,ejercicio,IND-03,Cuadrado de giros,10,Cuadrado de giros
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,3,Finalización exigente,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,3,Finalización exigente,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+PAREJA-INICIACION-30,Pareja · iniciación · 30 min,2,iniciación,30,1,Pase y apoyo,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+PAREJA-INICIACION-30,Pareja · iniciación · 30 min,2,iniciación,30,1,Pase y apoyo,2,ejercicio,PAR-02,Pases a dos toques,9,Pases a dos toques
+PAREJA-INICIACION-30,Pareja · iniciación · 30 min,2,iniciación,30,1,Pase y apoyo,3,ejercicio,PAR-06,Pase entre puertas,9,Pase entre puertas
+PAREJA-INICIACION-30,Pareja · iniciación · 30 min,2,iniciación,30,1,Pase y apoyo,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+PAREJA-INICIACION-30,Pareja · iniciación · 30 min,2,iniciación,30,1,Pase y apoyo,5,vuelta_calma,,,3,Conducción suave y movilidad.
+PAREJA-INICIACION-30,Pareja · iniciación · 30 min,2,iniciación,30,2,Control orientado,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+PAREJA-INICIACION-30,Pareja · iniciación · 30 min,2,iniciación,30,2,Control orientado,2,ejercicio,PAR-04,Control cruzado,9,Control cruzado
+PAREJA-INICIACION-30,Pareja · iniciación · 30 min,2,iniciación,30,2,Control orientado,3,ejercicio,PAR-10,Reacción por dos puertas,9,Reacción por dos puertas
+PAREJA-INICIACION-30,Pareja · iniciación · 30 min,2,iniciación,30,2,Control orientado,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+PAREJA-INICIACION-30,Pareja · iniciación · 30 min,2,iniciación,30,2,Control orientado,5,vuelta_calma,,,3,Conducción suave y movilidad.
+PAREJA-INICIACION-30,Pareja · iniciación · 30 min,2,iniciación,30,3,Movimiento tras pase,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+PAREJA-INICIACION-30,Pareja · iniciación · 30 min,2,iniciación,30,3,Movimiento tras pase,2,ejercicio,PAR-03,Pared y devolución,9,Pared y devolución
+PAREJA-INICIACION-30,Pareja · iniciación · 30 min,2,iniciación,30,3,Movimiento tras pase,3,ejercicio,PAR-08,Desmarque en diagonal,9,Desmarque en diagonal
+PAREJA-INICIACION-30,Pareja · iniciación · 30 min,2,iniciación,30,3,Movimiento tras pase,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+PAREJA-INICIACION-30,Pareja · iniciación · 30 min,2,iniciación,30,3,Movimiento tras pase,5,vuelta_calma,,,3,Conducción suave y movilidad.
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,1,Pase y apoyo,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,1,Pase y apoyo,2,ejercicio,PAR-02,Pases a dos toques,10,Pases a dos toques
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,1,Pase y apoyo,3,ejercicio,PAR-06,Pase entre puertas,10,Pase entre puertas
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,1,Pase y apoyo,4,ejercicio,PAR-01,Pase y sigue triangular,10,Pase y sigue triangular
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,1,Pase y apoyo,5,ejercicio,PAR-14,Reloj de pases,10,Reloj de pases
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,1,Pase y apoyo,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,1,Pase y apoyo,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,2,Control orientado,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,2,Control orientado,2,ejercicio,PAR-04,Control cruzado,10,Control cruzado
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,2,Control orientado,3,ejercicio,PAR-10,Reacción por dos puertas,10,Reacción por dos puertas
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,2,Control orientado,4,ejercicio,PAR-15,Control aéreo y apoyo,10,Control aéreo y apoyo
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,2,Control orientado,5,ejercicio,PAR-20,Primer toque alterno,10,Primer toque alterno
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,2,Control orientado,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,2,Control orientado,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,3,Movimiento tras pase,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,3,Movimiento tras pase,2,ejercicio,PAR-03,Pared y devolución,10,Pared y devolución
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,3,Movimiento tras pase,3,ejercicio,PAR-08,Desmarque en diagonal,10,Desmarque en diagonal
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,3,Movimiento tras pase,4,ejercicio,PAR-11,Pases en movimiento paralelo,10,Pases en movimiento paralelo
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,3,Movimiento tras pase,5,ejercicio,PAR-13,Pase y doblaje,10,Pase y doblaje
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,3,Movimiento tras pase,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+PAREJA-INICIACION-60,Pareja · iniciación · 60 min,2,iniciación,60,3,Movimiento tras pase,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+PAREJA-INTERMEDIO-30,Pareja · intermedio · 30 min,2,intermedio,30,1,Pared y desmarque,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+PAREJA-INTERMEDIO-30,Pareja · intermedio · 30 min,2,intermedio,30,1,Pared y desmarque,2,ejercicio,PAR-13,Pase y doblaje,9,Pase y doblaje
+PAREJA-INTERMEDIO-30,Pareja · intermedio · 30 min,2,intermedio,30,1,Pared y desmarque,3,ejercicio,PAR-03,Pared y devolución,9,Pared y devolución
+PAREJA-INTERMEDIO-30,Pareja · intermedio · 30 min,2,intermedio,30,1,Pared y desmarque,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+PAREJA-INTERMEDIO-30,Pareja · intermedio · 30 min,2,intermedio,30,1,Pared y desmarque,5,vuelta_calma,,,3,Conducción suave y movilidad.
+PAREJA-INTERMEDIO-30,Pareja · intermedio · 30 min,2,intermedio,30,2,Control y precisión,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+PAREJA-INTERMEDIO-30,Pareja · intermedio · 30 min,2,intermedio,30,2,Control y precisión,2,ejercicio,PAR-04,Control cruzado,9,Control cruzado
+PAREJA-INTERMEDIO-30,Pareja · intermedio · 30 min,2,intermedio,30,2,Control y precisión,3,ejercicio,PAR-10,Reacción por dos puertas,9,Reacción por dos puertas
+PAREJA-INTERMEDIO-30,Pareja · intermedio · 30 min,2,intermedio,30,2,Control y precisión,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+PAREJA-INTERMEDIO-30,Pareja · intermedio · 30 min,2,intermedio,30,2,Control y precisión,5,vuelta_calma,,,3,Conducción suave y movilidad.
+PAREJA-INTERMEDIO-30,Pareja · intermedio · 30 min,2,intermedio,30,3,Asistencia y tiro,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+PAREJA-INTERMEDIO-30,Pareja · intermedio · 30 min,2,intermedio,30,3,Asistencia y tiro,2,ejercicio,PAR-09,Finalización con asistencia,9,Finalización con asistencia
+PAREJA-INTERMEDIO-30,Pareja · intermedio · 30 min,2,intermedio,30,3,Asistencia y tiro,3,ejercicio,PAR-12,Combinación y tiro,9,Combinación y tiro
+PAREJA-INTERMEDIO-30,Pareja · intermedio · 30 min,2,intermedio,30,3,Asistencia y tiro,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+PAREJA-INTERMEDIO-30,Pareja · intermedio · 30 min,2,intermedio,30,3,Asistencia y tiro,5,vuelta_calma,,,3,Conducción suave y movilidad.
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,1,Pared y desmarque,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,1,Pared y desmarque,2,ejercicio,PAR-13,Pase y doblaje,10,Pase y doblaje
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,1,Pared y desmarque,3,ejercicio,PAR-03,Pared y devolución,10,Pared y devolución
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,1,Pared y desmarque,4,ejercicio,PAR-08,Desmarque en diagonal,10,Desmarque en diagonal
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,1,Pared y desmarque,5,ejercicio,PAR-18,Pase al espacio,10,Pase al espacio
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,1,Pared y desmarque,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,1,Pared y desmarque,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,2,Control y precisión,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,2,Control y precisión,2,ejercicio,PAR-04,Control cruzado,10,Control cruzado
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,2,Control y precisión,3,ejercicio,PAR-10,Reacción por dos puertas,10,Reacción por dos puertas
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,2,Control y precisión,4,ejercicio,PAR-15,Control aéreo y apoyo,10,Control aéreo y apoyo
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,2,Control y precisión,5,ejercicio,PAR-20,Primer toque alterno,10,Primer toque alterno
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,2,Control y precisión,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,2,Control y precisión,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,3,Asistencia y tiro,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,3,Asistencia y tiro,2,ejercicio,PAR-09,Finalización con asistencia,10,Finalización con asistencia
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,3,Asistencia y tiro,3,ejercicio,PAR-12,Combinación y tiro,10,Combinación y tiro
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,3,Asistencia y tiro,4,ejercicio,PAR-19,"Pared, cruce y finalización",10,"Pared, cruce y finalización"
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,3,Asistencia y tiro,5,ejercicio,PAR-06,Pase entre puertas,10,Pase entre puertas
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,3,Asistencia y tiro,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,3,Asistencia y tiro,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+PAREJA-AVANZADO-30,Pareja · avanzado · 30 min,2,avanzado,30,1,Protección y presión,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+PAREJA-AVANZADO-30,Pareja · avanzado · 30 min,2,avanzado,30,1,Protección y presión,2,ejercicio,PAR-07,Rondo 1 contra 1 con apoyo,9,Rondo 1 contra 1 con apoyo
+PAREJA-AVANZADO-30,Pareja · avanzado · 30 min,2,avanzado,30,1,Protección y presión,3,ejercicio,PAR-16,Protección con oposición,9,Protección con oposición
+PAREJA-AVANZADO-30,Pareja · avanzado · 30 min,2,avanzado,30,1,Protección y presión,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+PAREJA-AVANZADO-30,Pareja · avanzado · 30 min,2,avanzado,30,1,Protección y presión,5,vuelta_calma,,,3,Conducción suave y movilidad.
+PAREJA-AVANZADO-30,Pareja · avanzado · 30 min,2,avanzado,30,2,Velocidad de combinación,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+PAREJA-AVANZADO-30,Pareja · avanzado · 30 min,2,avanzado,30,2,Velocidad de combinación,2,ejercicio,PAR-03,Pared y devolución,9,Pared y devolución
+PAREJA-AVANZADO-30,Pareja · avanzado · 30 min,2,avanzado,30,2,Velocidad de combinación,3,ejercicio,PAR-13,Pase y doblaje,9,Pase y doblaje
+PAREJA-AVANZADO-30,Pareja · avanzado · 30 min,2,avanzado,30,2,Velocidad de combinación,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+PAREJA-AVANZADO-30,Pareja · avanzado · 30 min,2,avanzado,30,2,Velocidad de combinación,5,vuelta_calma,,,3,Conducción suave y movilidad.
+PAREJA-AVANZADO-30,Pareja · avanzado · 30 min,2,avanzado,30,3,Finalización combinada,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón."
+PAREJA-AVANZADO-30,Pareja · avanzado · 30 min,2,avanzado,30,3,Finalización combinada,2,ejercicio,PAR-09,Finalización con asistencia,9,Finalización con asistencia
+PAREJA-AVANZADO-30,Pareja · avanzado · 30 min,2,avanzado,30,3,Finalización combinada,3,ejercicio,PAR-12,Combinación y tiro,9,Combinación y tiro
+PAREJA-AVANZADO-30,Pareja · avanzado · 30 min,2,avanzado,30,3,Finalización combinada,4,reto,,,4,Repite el ejercicio más difícil intentando superar tu mejor marca.
+PAREJA-AVANZADO-30,Pareja · avanzado · 30 min,2,avanzado,30,3,Finalización combinada,5,vuelta_calma,,,3,Conducción suave y movilidad.
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,1,Protección y presión,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,1,Protección y presión,2,ejercicio,PAR-07,Rondo 1 contra 1 con apoyo,10,Rondo 1 contra 1 con apoyo
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,1,Protección y presión,3,ejercicio,PAR-16,Protección con oposición,10,Protección con oposición
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,1,Protección y presión,4,ejercicio,PAR-17,Desafío de puertas cronometrado,10,Desafío de puertas cronometrado
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,1,Protección y presión,5,ejercicio,PAR-20,Primer toque alterno,10,Primer toque alterno
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,1,Protección y presión,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,1,Protección y presión,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,2,Velocidad de combinación,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,2,Velocidad de combinación,2,ejercicio,PAR-03,Pared y devolución,10,Pared y devolución
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,2,Velocidad de combinación,3,ejercicio,PAR-13,Pase y doblaje,10,Pase y doblaje
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,2,Velocidad de combinación,4,ejercicio,PAR-14,Reloj de pases,10,Reloj de pases
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,2,Velocidad de combinación,5,ejercicio,PAR-18,Pase al espacio,10,Pase al espacio
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,2,Velocidad de combinación,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,2,Velocidad de combinación,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,3,Finalización combinada,1,calentamiento,,,8,"Movilidad, activación, conducción libre y ambos perfiles."
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,3,Finalización combinada,2,ejercicio,PAR-09,Finalización con asistencia,10,Finalización con asistencia
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,3,Finalización combinada,3,ejercicio,PAR-12,Combinación y tiro,10,Combinación y tiro
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,3,Finalización combinada,4,ejercicio,PAR-19,"Pared, cruce y finalización",10,"Pared, cruce y finalización"
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,3,Finalización combinada,5,ejercicio,PAR-11,Pases en movimiento paralelo,10,Pases en movimiento paralelo
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,3,Finalización combinada,6,reto,,,7,Ronda cronometrada: máxima precisión manteniendo buena técnica.
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,3,Finalización combinada,7,vuelta_calma,,,5,"Toques suaves, respiración y movilidad."
