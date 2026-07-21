@@ -1,5 +1,5 @@
 /* Service worker: deja la app usable sin conexión (campo sin cobertura). */
-const VERSION = 'v1';
+const VERSION = 'v2';
 const SHELL_CACHE = `shell-${VERSION}`;
 const MEDIA_CACHE = `media-${VERSION}`;
 const SHELL = [
@@ -31,7 +31,7 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   const request = event.request;
   if (request.method !== 'GET' || new URL(request.url).origin !== location.origin) return;
-  const isMedia = /\.(gif|svg|png)$/.test(new URL(request.url).pathname);
+  const isMedia = /\.(webp|gif|svg|png)$/.test(new URL(request.url).pathname);
   if (isMedia) {
     // Los GIF no cambian: primero caché, y si no está, red + guardado.
     event.respondWith(

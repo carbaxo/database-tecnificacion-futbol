@@ -3,6 +3,13 @@
   const isPlans = /planes\.html$/i.test(location.pathname);
   page.classList.add(isPlans ? 'plans-page' : 'catalog-page');
 
+  // Preferencias y progreso guardados en el dispositivo.
+  const store = {
+    get(key, fallback) { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } },
+    set(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch {} }
+  };
+  const escape = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[char]));
+
   const header = document.querySelector('header');
   const title = isPlans ? 'Tu semana de entrenamiento, lista para jugar' : 'Entrena con intención. Mejora en cada toque.';
   const description = isPlans
@@ -50,15 +57,27 @@
     if (open) { closingFromHistory = true; open.close(); closingFromHistory = false; }
   });
 
+  // Aviso de uso sin conexión (el service worker sirve el contenido guardado).
+  const offlineBanner = document.createElement('div');
+  offlineBanner.className = 'offline-banner';
+  offlineBanner.setAttribute('role', 'status');
+  offlineBanner.textContent = 'Sin conexión · usando el contenido guardado';
+  document.body.append(offlineBanner);
+  const syncOffline = () => offlineBanner.classList.toggle('show', !navigator.onLine);
+  window.addEventListener('online', syncOffline);
+  window.addEventListener('offline', syncOffline);
+  syncOffline();
+
   const filters = document.querySelector('.filters');
   const main = document.querySelector('main');
   if (!filters || !main) return;
   main.id = isPlans ? 'planes' : 'ejercicios';
   const selects = [...filters.querySelectorAll('select')];
   const filterHtml = selects.map(select => `<label class="filter-field">${select.outerHTML}</label>`).join('');
-  filters.innerHTML = `<div class="filter-inner"><span class="filter-label">Filtrar por</span>${!isPlans ? '<label class="search-wrap"><input id="exercise-search" type="search" placeholder="Buscar ejercicio" aria-label="Buscar ejercicio"></label>' : ''}${filterHtml}<button class="reset-button" type="button">Limpiar</button></div>`;
+  filters.innerHTML = `<div class="filter-inner"><span class="filter-label">Filtrar por</span>${!isPlans ? '<label class="search-wrap"><input id="exercise-search" type="search" placeholder="Buscar ejercicio" aria-label="Buscar ejercicio"></label>' : ''}${filterHtml}${!isPlans ? '<button class="fav-filter" type="button" aria-pressed="false">☆ Favoritos</button>' : ''}<button class="reset-button" type="button">Limpiar</button></div>`;
   const liveSelects = [...filters.querySelectorAll('select')];
   const search = filters.querySelector('#exercise-search');
+  const favFilterButton = filters.querySelector('.fav-filter');
   const cards = [...main.children];
   const type = isPlans ? 'planes' : 'ejercicios';
   const intro = document.createElement('section');
@@ -71,13 +90,18 @@
   empty.innerHTML = '<strong>No hemos encontrado coincidencias.</strong>Prueba a eliminar algún filtro o busca otro término.';
   main.append(empty);
 
+  // Favoritos (catálogo).
+  const favs = new Set(store.get('ft:favoritos', []));
+  let favsOnly = false;
+
   const apply = () => {
     const term = search?.value.trim().toLocaleLowerCase('es') || '';
     let visible = 0;
     cards.forEach(card => {
       const filtersOk = liveSelects.every(select => !select.value || card.dataset[select.id] === select.value);
+      const favOk = !favsOnly || favs.has(card.dataset.id);
       const searchable = card.textContent.toLocaleLowerCase('es');
-      const shown = filtersOk && (!term || searchable.includes(term));
+      const shown = filtersOk && favOk && (!term || searchable.includes(term));
       card.classList.toggle('hide', !shown);
       if (shown) visible++;
     });
@@ -86,50 +110,151 @@
   };
   liveSelects.forEach(select => select.addEventListener('change', apply));
   search?.addEventListener('input', apply);
+  favFilterButton?.addEventListener('click', () => {
+    favsOnly = !favsOnly;
+    favFilterButton.setAttribute('aria-pressed', String(favsOnly));
+    favFilterButton.textContent = favsOnly ? '★ Favoritos' : '☆ Favoritos';
+    apply();
+  });
   filters.querySelector('.reset-button').addEventListener('click', () => {
     liveSelects.forEach(select => { select.value = ''; });
     if (search) search.value = '';
-    apply();
+    if (favsOnly) favFilterButton?.click(); else apply();
   });
+
+  // Datos de ejercicios, disponibles en ambas páginas.
+  let detailsPromise;
+  const loadDetails = () => detailsPromise ||= globalThis.TRAINING_DATA?.exercises
+    ? Promise.resolve(new Map(Object.entries(globalThis.TRAINING_DATA.exercises)))
+    : Promise.all([
+        fetch('ejercicios.json').then(response => response.json()),
+        isPlans ? fetch('index.html').then(response => response.text()).then(html => new DOMParser().parseFromString(html, 'text/html')) : Promise.resolve(document)
+      ]).then(([data, catalog]) => {
+        const media = new Map([...catalog.querySelectorAll('.card')].map(card => [card.querySelector('b')?.textContent.match(/(?:IND|PAR)-\d{2}/)?.[0], card.querySelector('img')?.getAttribute('src')]));
+        return new Map(data.ejercicios.map(exercise => [exercise.id, { ...exercise, gif: media.get(exercise.id) }]));
+      });
+  const mediaFor = exercise => exercise.gif || exercise.archivo_gif || `svg/${exercise.archivo_svg?.split('/').pop() || ''}`;
+
+  // Ficha de ejercicio (modal compartido por catálogo y planes).
+  const dialog = document.createElement('dialog');
+  dialog.className = 'exercise-modal';
+  dialog.innerHTML = `<button class="modal-close" type="button" aria-label="Cerrar ficha">×</button><div class="modal-content"><div class="modal-media"><img alt="" /></div><div class="modal-copy"><span class="modal-kicker">${isPlans ? 'Ejercicio del plan' : 'Ficha del ejercicio'}</span><h2></h2><p class="modal-meta"></p><div class="modal-description"></div><dl class="modal-facts"></dl><button class="share-exercise" type="button">Compartir ejercicio</button></div></div>`;
+  document.body.append(dialog);
+  trackDialog(dialog);
+  const modalImage = dialog.querySelector('img');
+  const modalTitle = dialog.querySelector('h2');
+  const modalMeta = dialog.querySelector('.modal-meta');
+  const modalDescription = dialog.querySelector('.modal-description');
+  const modalFacts = dialog.querySelector('.modal-facts');
+  const shareButton = dialog.querySelector('.share-exercise');
+  const openExercise = async id => {
+    dialog.dataset.exercise = id || '';
+    modalTitle.textContent = 'Cargando ejercicio…'; modalMeta.textContent = ''; modalDescription.innerHTML = ''; modalFacts.innerHTML = ''; modalImage.removeAttribute('src'); openDialog(dialog);
+    try {
+      const exercise = (await loadDetails()).get(id);
+      if (!exercise) throw new Error('Ejercicio no encontrado');
+      modalImage.src = mediaFor(exercise);
+      modalImage.alt = `Demostración animada de ${exercise.nombre}`;
+      modalTitle.textContent = `${exercise.id} · ${exercise.nombre}`;
+      modalMeta.textContent = `${exercise.jugadores} jugador${exercise.jugadores > 1 ? 'es' : ''} · ${exercise.nivel} · ${exercise.duracion_min} min`;
+      modalDescription.innerHTML = `<p>${escape(exercise.instrucciones)}</p><p>Prepara ${escape(exercise.material.toLowerCase())} y empieza a un ritmo controlado. Mantén una postura activa, la cabeza levantada cuando el recorrido lo permita y el balón siempre a una distancia que puedas dominar. Repite el gesto alternando perfiles o pies, priorizando precisión y limpieza técnica antes de aumentar la velocidad.</p><p><strong>Clave de mejora:</strong> termina cada repetición con el control orientado hacia la siguiente acción. Si pierdes el balón o la calidad del gesto, baja el ritmo, corrige la postura y vuelve a intentarlo.</p>`;
+      modalFacts.innerHTML = `<div><dt>Objetivo</dt><dd>${escape(exercise.objetivo)}</dd></div><div><dt>Material</dt><dd>${escape(exercise.material)}</dd></div><div><dt>Tiempo sugerido</dt><dd>${escape(exercise.duracion_min)} minutos</dd></div>`;
+    } catch { modalTitle.textContent = 'No se pudo cargar este ejercicio'; modalDescription.innerHTML = '<p>Vuelve a intentarlo en unos segundos.</p>'; }
+  };
+  dialog.querySelector('.modal-close').addEventListener('click', () => dialog.close());
+  shareButton.addEventListener('click', async () => {
+    const id = dialog.dataset.exercise;
+    if (!id) return;
+    const url = new URL(`index.html#${id}`, location.href).href;
+    const shareTitle = modalTitle.textContent;
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: shareTitle, text: `Ejercicio de tecnificación: ${shareTitle}`, url });
+      } else {
+        await navigator.clipboard.writeText(url);
+        shareButton.textContent = 'Enlace copiado ✓';
+        setTimeout(() => { shareButton.textContent = 'Compartir ejercicio'; }, 2000);
+      }
+    } catch {}
+  });
+
+  if (!isPlans) {
+    // Tarjetas del catálogo: favorito + apertura de la ficha.
+    cards.forEach(card => {
+      const id = card.querySelector('b')?.textContent.match(/\b(?:IND|PAR)-\d{2}\b/)?.[0];
+      if (!id) return;
+      card.dataset.id = id;
+      const star = document.createElement('button');
+      star.className = 'fav-toggle';
+      star.type = 'button';
+      const syncStar = () => {
+        const on = favs.has(id);
+        star.textContent = on ? '★' : '☆';
+        star.classList.toggle('on', on);
+        star.setAttribute('aria-label', on ? `Quitar ${id} de favoritos` : `Guardar ${id} en favoritos`);
+        star.setAttribute('aria-pressed', String(on));
+      };
+      syncStar();
+      star.addEventListener('click', event => {
+        event.stopPropagation();
+        favs.has(id) ? favs.delete(id) : favs.add(id);
+        store.set('ft:favoritos', [...favs]);
+        syncStar();
+        if (favsOnly) apply();
+      });
+      card.prepend(star);
+      card.tabIndex = 0;
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-label', `Ver ficha de ${card.querySelector('b')?.textContent || id}`);
+      card.addEventListener('click', () => openExercise(id));
+      card.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openExercise(id); } });
+    });
+
+    // Enlaces compartidos: index.html#IND-01 abre la ficha directamente.
+    const openFromHash = () => {
+      const id = location.hash.match(/(?:IND|PAR)-\d{2}/)?.[0];
+      if (id) openExercise(id);
+    };
+    window.addEventListener('hashchange', openFromHash);
+    openFromHash();
+
+    // Leyenda de los diagramas, solo hasta que se descarta.
+    if (!store.get('ft:leyenda', false)) {
+      const legend = document.createElement('section');
+      legend.className = 'legend-banner';
+      legend.innerHTML = `<div class="legend-inner"><div><strong>Cómo leer los diagramas</strong><ul><li><i class="lg-swatch lg-white" aria-hidden="true"></i>Línea blanca continua: desplazamiento o conducción</li><li><i class="lg-swatch lg-yellow" aria-hidden="true"></i>Línea amarilla discontinua: pase o recorrido del balón</li><li><i class="lg-swatch lg-green" aria-hidden="true"></i>Punto verde: inicio · la bandera marca el final</li><li><i class="lg-swatch lg-ab" aria-hidden="true">A</i>Las letras A y B identifican a los jugadores</li></ul></div><button class="legend-close" type="button">Entendido</button></div>`;
+      main.before(legend);
+      legend.querySelector('.legend-close').addEventListener('click', () => { store.set('ft:leyenda', true); legend.remove(); });
+    }
+  }
+
   if (isPlans) {
     const exerciseRows = [...main.querySelectorAll('li')].filter(row => /\b(?:IND|PAR)-\d{2}\b/.test(row.textContent));
-    const dialog = document.createElement('dialog');
-    dialog.className = 'exercise-modal';
-    dialog.innerHTML = `<button class="modal-close" type="button" aria-label="Cerrar ficha">×</button><div class="modal-content"><div class="modal-media"><img alt="" /></div><div class="modal-copy"><span class="modal-kicker">Ejercicio del plan</span><h2></h2><p class="modal-meta"></p><div class="modal-description"></div><dl class="modal-facts"></dl></div></div>`;
-    document.body.append(dialog);
-    trackDialog(dialog);
-    const modalImage = dialog.querySelector('img');
-    const modalTitle = dialog.querySelector('h2');
-    const modalMeta = dialog.querySelector('.modal-meta');
-    const modalDescription = dialog.querySelector('.modal-description');
-    const modalFacts = dialog.querySelector('.modal-facts');
-    const escape = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[char]));
-    let detailsPromise;
-    const loadDetails = () => detailsPromise ||= globalThis.TRAINING_DATA?.exercises ? Promise.resolve(new Map(Object.entries(globalThis.TRAINING_DATA.exercises))) : Promise.all([fetch('ejercicios.json').then(response => response.json()), fetch('index.html').then(response => response.text())]).then(([data, catalogHtml]) => {
-      const catalog = new DOMParser().parseFromString(catalogHtml, 'text/html');
-      const gifs = new Map([...catalog.querySelectorAll('.card')].map(card => [card.querySelector('b')?.textContent.match(/(?:IND|PAR)-\d{2}/)?.[0], card.querySelector('img')?.getAttribute('src')]));
-      return new Map(data.ejercicios.map(exercise => [exercise.id, { ...exercise, gif: gifs.get(exercise.id) }]));
-    });
-    const openExercise = async id => {
-      modalTitle.textContent = 'Cargando ejercicio…'; modalMeta.textContent = ''; modalDescription.innerHTML = ''; modalFacts.innerHTML = ''; modalImage.removeAttribute('src'); openDialog(dialog);
-      try {
-        const exercise = (await loadDetails()).get(id);
-        if (!exercise) throw new Error('Ejercicio no encontrado');
-        modalImage.src = exercise.gif || `svg/${exercise.archivo_svg?.split('/').pop() || ''}`;
-        modalImage.alt = `Demostración animada de ${exercise.nombre}`;
-        modalTitle.textContent = `${exercise.id} · ${exercise.nombre}`;
-        modalMeta.textContent = `${exercise.jugadores} jugador${exercise.jugadores > 1 ? 'es' : ''} · ${exercise.nivel} · ${exercise.duracion_min} min`;
-        modalDescription.innerHTML = `<p>${escape(exercise.instrucciones)}</p><p>Prepara ${escape(exercise.material.toLowerCase())} y empieza a un ritmo controlado. Mantén una postura activa, la cabeza levantada cuando el recorrido lo permita y el balón siempre a una distancia que puedas dominar. Repite el gesto alternando perfiles o pies, priorizando precisión y limpieza técnica antes de aumentar la velocidad.</p><p><strong>Clave de mejora:</strong> termina cada repetición con el control orientado hacia la siguiente acción. Si pierdes el balón o la calidad del gesto, baja el ritmo, corrige la postura y vuelve a intentarlo.</p>`;
-        modalFacts.innerHTML = `<div><dt>Objetivo</dt><dd>${escape(exercise.objetivo)}</dd></div><div><dt>Material</dt><dd>${escape(exercise.material)}</dd></div><div><dt>Tiempo sugerido</dt><dd>${escape(exercise.duracion_min)} minutos</dd></div>`;
-      } catch { modalTitle.textContent = 'No se pudo cargar este ejercicio'; modalDescription.innerHTML = '<p>Vuelve a intentarlo en unos segundos.</p>'; }
-    };
-    dialog.querySelector('.modal-close').addEventListener('click', () => dialog.close());
     exerciseRows.forEach(row => {
       const id = row.textContent.match(/\b(?:IND|PAR)-\d{2}\b/)?.[0];
       row.classList.add('exercise-link'); row.tabIndex = 0; row.setAttribute('role', 'button'); row.setAttribute('aria-label', `Ver demostración y detalle de ${row.textContent.trim()}`);
       row.addEventListener('click', () => openExercise(id));
       row.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openExercise(id); } });
     });
+
+    // Progreso guardado en el dispositivo: sesiones completadas por plan y día.
+    const progressData = () => store.get('ft:progreso', {});
+    const totalSessions = () => Object.values(progressData()).reduce((sum, plan) => sum + Object.keys(plan).length, 0);
+    const formatDay = iso => new Date(`${iso}T12:00:00`).toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
+    const refreshPlanBadges = () => cards.forEach(card => {
+      const name = card.querySelector('h2')?.textContent;
+      if (!name) return;
+      const done = Object.keys(progressData()[name] || {}).length;
+      let badge = card.querySelector('.plan-progress');
+      if (!done) { badge?.remove(); return; }
+      if (!badge) {
+        badge = document.createElement('span');
+        badge.className = 'plan-progress';
+        card.querySelector('.tag')?.after(badge);
+      }
+      badge.textContent = `✓ ${done} ${done === 1 ? 'sesión completada' : 'sesiones completadas'}`;
+    });
+    refreshPlanBadges();
 
     const workoutDialog = document.createElement('dialog');
     workoutDialog.className = 'workout-modal';
@@ -160,6 +285,28 @@
     document.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'visible' && workoutDialog.open && !run.classList.contains('hide')) requestWakeLock();
     });
+    // Doble pitido al completar el tiempo de un bloque.
+    let audioCtx;
+    const beep = () => {
+      try {
+        audioCtx ||= new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        const now = audioCtx.currentTime;
+        [[880, 0], [660, .22]].forEach(([frequency, at]) => {
+          const oscillator = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          oscillator.type = 'sine';
+          oscillator.frequency.value = frequency;
+          oscillator.connect(gain);
+          gain.connect(audioCtx.destination);
+          gain.gain.setValueAtTime(.0001, now + at);
+          gain.gain.exponentialRampToValueAtTime(.3, now + at + .02);
+          gain.gain.exponentialRampToValueAtTime(.0001, now + at + .2);
+          oscillator.start(now + at);
+          oscillator.stop(now + at + .22);
+        });
+      } catch {}
+    };
     const loadPlans = () => plansPromise ||= globalThis.TRAINING_DATA?.plans ? Promise.resolve(globalThis.TRAINING_DATA.plans) : fetch('planes_entrenamiento.json').then(response => response.json()).then(data => data.planes);
     const planFromCard = card => ({
       nombre: card.querySelector('h2')?.textContent || 'Plan de entrenamiento',
@@ -177,10 +324,36 @@
       })
     });
     const formatTime = seconds => `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}`;
+    let autoTimeout = null;
+    const clearAuto = () => { clearTimeout(autoTimeout); autoTimeout = null; };
     const stopTimer = () => { clearInterval(workoutState.timer); workoutState.timer = null; workoutState.running = false; timerButton.textContent = '▶ Iniciar'; };
     const updateTimer = () => { workoutTime.textContent = formatTime(workoutState.seconds); };
+    const startTimer = () => {
+      if (workoutState.running || workoutState.seconds <= 0) return;
+      workoutState.running = true; timerButton.textContent = 'Ⅱ Pausar';
+      // Cuenta atrás anclada a la hora real: sigue siendo exacta aunque el sistema pause los temporizadores en segundo plano.
+      const deadline = Date.now() + workoutState.seconds * 1000;
+      workoutState.timer = setInterval(() => {
+        workoutState.seconds = Math.max(0, Math.round((deadline - Date.now()) / 1000));
+        updateTimer();
+        if (workoutState.seconds === 0) blockCompleted();
+      }, 250);
+    };
+    const blockCompleted = () => {
+      stopTimer();
+      beep();
+      navigator.vibrate?.([250, 120, 250]);
+      const last = workoutState.index >= workoutState.session.bloques.length - 1;
+      if (!last && store.get('ft:auto', true)) {
+        workoutCoach.textContent = '¡Tiempo completado! Pasamos al siguiente bloque en 5 segundos…';
+        autoTimeout = setTimeout(() => { workoutState.index++; renderStep(); startTimer(); }, 5000);
+      } else {
+        workoutCoach.textContent = last ? '¡Última ronda completada! Pulsad «Finalizar entrenamiento».' : '¡Tiempo completado! Cuando estéis listos, pasad al siguiente bloque.';
+      }
+    };
     const renderStep = async () => {
       const block = workoutState.session.bloques[workoutState.index];
+      clearAuto();
       stopTimer();
       workoutState.seconds = block.minutos * 60;
       updateTimer();
@@ -194,10 +367,13 @@
       workoutDescription.textContent = block.tipo === 'ejercicio' ? 'Cargando demostración y consejos…' : `Dedica ${block.minutos} minutos a este bloque. Mantén un ritmo cómodo y prioriza que tu hijo se sienta seguro con el balón.`;
       workoutCoach.textContent = block.tipo === 'ejercicio' ? 'Consejo: empezad despacio y celebrad cada repetición bien hecha.' : 'Consejo: este bloque prepara el cuerpo y la atención para el siguiente ejercicio.';
       workoutImage.removeAttribute('src'); workoutImage.alt = ''; workoutPlaceholder.classList.toggle('hide', block.tipo === 'ejercicio');
+      // Precarga la animación del siguiente bloque durante el actual.
+      const nextBlock = workoutState.session.bloques[workoutState.index + 1];
+      if (nextBlock?.tipo === 'ejercicio') loadDetails().then(map => { const upcoming = map.get(nextBlock.ejercicio_id); if (upcoming) new Image().src = mediaFor(upcoming); }).catch(() => {});
       if (block.tipo === 'ejercicio') {
         const exercise = (await loadDetails()).get(block.ejercicio_id);
         if (workoutState.session.bloques[workoutState.index] !== block || !exercise) return;
-        workoutImage.src = exercise.gif || `svg/${exercise.archivo_svg?.split('/').pop() || ''}`;
+        workoutImage.src = mediaFor(exercise);
         workoutImage.alt = `Demostración animada de ${exercise.nombre}`;
         workoutDescription.textContent = exercise.instrucciones;
         workoutCoach.textContent = `Material: ${exercise.material}. ${exercise.duracion_min} min sugeridos. Mantén la cabeza levantada cuando sea posible y prioriza el control antes de subir la velocidad.`;
@@ -210,33 +386,33 @@
       requestWakeLock();
       renderStep();
     };
+    const finishWorkout = () => {
+      stopTimer();
+      clearAuto();
+      const progress = progressData();
+      (progress[workoutState.plan.nombre] ||= {})[workoutState.session.dia] = new Date().toISOString().slice(0, 10);
+      store.set('ft:progreso', progress);
+      refreshPlanBadges();
+      const total = totalSessions();
+      run.classList.add('hide'); setup.classList.remove('hide');
+      setup.innerHTML = `<span class="workout-eyebrow">¡Entrenamiento completado!</span><h2>Muy buen trabajo</h2><p>La sesión queda guardada en este dispositivo: ${total === 1 ? 'es vuestra primera sesión completada' : `lleváis ${total} sesiones completadas`}. Cerrad con unos minutos tranquilos, agua y una felicitación por el esfuerzo.</p><button type="button" class="finish-workout">Cerrar</button>`;
+      setup.querySelector('.finish-workout').addEventListener('click', () => workoutDialog.close());
+    };
     const chooseDay = plan => {
       stopTimer();
+      clearAuto();
       setup.classList.remove('hide'); run.classList.add('hide');
-      setup.innerHTML = `<span class="workout-eyebrow">Modo entrenar</span><h2>${escape(plan.nombre)}</h2><p>Elige el día de hoy. La sesión te acompañará paso a paso y el cronómetro se reinicia en cada bloque.</p><div class="day-picker">${plan.sesiones.map(session => `<button type="button" data-day="${session.dia}"><strong>Día ${session.dia}</strong><span>${escape(session.titulo)}</span><small>${session.duracion_min} min · ${session.bloques.length} bloques</small></button>`).join('')}</div><p class="workout-note">Puedes pausar, repetir o avanzar cuando lo necesitéis.</p>`;
+      const done = progressData()[plan.nombre] || {};
+      setup.innerHTML = `<span class="workout-eyebrow">Modo entrenar</span><h2>${escape(plan.nombre)}</h2><p>Elige el día de hoy. La sesión te acompañará paso a paso y el cronómetro se reinicia en cada bloque.</p><div class="day-picker">${plan.sesiones.map(session => `<button type="button" data-day="${session.dia}" class="${done[session.dia] ? 'done' : ''}"><strong>Día ${session.dia}</strong><span>${escape(session.titulo)}</span><small>${session.duracion_min} min · ${session.bloques.length} bloques${done[session.dia] ? ` · ✓ hecho el ${formatDay(done[session.dia])}` : ''}</small></button>`).join('')}</div><label class="auto-toggle"><input type="checkbox" ${store.get('ft:auto', true) ? 'checked' : ''}> Avance automático: al acabar el tiempo suena un aviso y pasa solo al siguiente bloque</label><p class="workout-note">Puedes pausar, repetir o avanzar cuando lo necesitéis.</p>`;
+      setup.querySelector('.auto-toggle input').addEventListener('change', event => store.set('ft:auto', event.target.checked));
       setup.querySelectorAll('[data-day]').forEach(button => button.addEventListener('click', () => startSession(plan, plan.sesiones.find(session => session.dia === Number(button.dataset.day)))));
       openDialog(workoutDialog);
     };
-    workoutDialog.querySelector('.workout-close').addEventListener('click', () => { stopTimer(); workoutDialog.close(); });
-    workoutDialog.addEventListener('close', () => { stopTimer(); releaseWakeLock(); });
-    timerButton.addEventListener('click', () => {
-      if (workoutState.running) return stopTimer();
-      if (workoutState.seconds <= 0) return;
-      workoutState.running = true; timerButton.textContent = 'Ⅱ Pausar';
-      // Cuenta atrás anclada a la hora real: sigue siendo exacta aunque el sistema pause los temporizadores en segundo plano.
-      const deadline = Date.now() + workoutState.seconds * 1000;
-      workoutState.timer = setInterval(() => {
-        workoutState.seconds = Math.max(0, Math.round((deadline - Date.now()) / 1000));
-        updateTimer();
-        if (workoutState.seconds === 0) {
-          stopTimer();
-          navigator.vibrate?.([250, 120, 250]);
-          workoutCoach.textContent = '¡Tiempo completado! Cuando estéis listos, pasad al siguiente bloque.';
-        }
-      }, 250);
-    });
-    previousButton.addEventListener('click', () => { if (workoutState.index > 0) { workoutState.index--; renderStep(); } });
-    nextButton.addEventListener('click', () => { if (workoutState.index < workoutState.session.bloques.length - 1) { workoutState.index++; renderStep(); } else { stopTimer(); run.classList.add('hide'); setup.classList.remove('hide'); setup.innerHTML = `<span class="workout-eyebrow">¡Entrenamiento completado!</span><h2>Muy buen trabajo</h2><p>Habéis terminado la sesión. Cerrad con unos minutos tranquilos, agua y una felicitación por el esfuerzo.</p><button type="button" class="finish-workout">Cerrar</button>`; setup.querySelector('.finish-workout').addEventListener('click', () => workoutDialog.close()); } });
+    workoutDialog.querySelector('.workout-close').addEventListener('click', () => { stopTimer(); clearAuto(); workoutDialog.close(); });
+    workoutDialog.addEventListener('close', () => { stopTimer(); clearAuto(); releaseWakeLock(); });
+    timerButton.addEventListener('click', () => { clearAuto(); workoutState.running ? stopTimer() : startTimer(); });
+    previousButton.addEventListener('click', () => { clearAuto(); if (workoutState.index > 0) { workoutState.index--; renderStep(); } });
+    nextButton.addEventListener('click', () => { clearAuto(); if (workoutState.index < workoutState.session.bloques.length - 1) { workoutState.index++; renderStep(); } else finishWorkout(); });
     cards.forEach(card => {
       const trainButton = document.createElement('button');
       trainButton.className = 'start-workout'; trainButton.type = 'button'; trainButton.textContent = '▶ Entrenar este plan';
