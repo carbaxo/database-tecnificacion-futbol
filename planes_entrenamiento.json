@@ -142,21 +142,21 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "IND-18",
+              "ejercicio_id": "IND-21",
               "minutos": 5,
-              "descripcion": "Doble finta corporal"
+              "descripcion": "Regate en zigzag agresivo"
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "IND-11",
+              "ejercicio_id": "IND-22",
               "minutos": 5,
-              "descripcion": "Protección y giro"
+              "descripcion": "Protección 360° y salida"
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "IND-15",
+              "ejercicio_id": "IND-23",
               "minutos": 5,
-              "descripcion": "Caza de puertas"
+              "descripcion": "Decisión por colores"
             },
             {
               "tipo": "ejercicio",
@@ -390,21 +390,21 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "IND-18",
+              "ejercicio_id": "IND-21",
               "minutos": 5,
-              "descripcion": "Doble finta corporal"
+              "descripcion": "Regate en zigzag agresivo"
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "IND-11",
+              "ejercicio_id": "IND-22",
               "minutos": 5,
-              "descripcion": "Protección y giro"
+              "descripcion": "Protección 360° y salida"
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "IND-15",
+              "ejercicio_id": "IND-23",
               "minutos": 5,
-              "descripcion": "Caza de puertas"
+              "descripcion": "Decisión por colores"
             },
             {
               "tipo": "ejercicio",
@@ -561,21 +561,21 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "IND-18",
+              "ejercicio_id": "IND-21",
               "minutos": 5,
-              "descripcion": "Doble finta corporal"
+              "descripcion": "Regate en zigzag agresivo"
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "IND-11",
+              "ejercicio_id": "IND-22",
               "minutos": 5,
-              "descripcion": "Protección y giro"
+              "descripcion": "Protección 360° y salida"
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "IND-15",
+              "ejercicio_id": "IND-23",
               "minutos": 5,
-              "descripcion": "Caza de puertas"
+              "descripcion": "Decisión por colores"
             },
             {
               "tipo": "ejercicio",
@@ -715,21 +715,21 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "IND-18",
+              "ejercicio_id": "IND-21",
               "minutos": 5,
-              "descripcion": "Doble finta corporal"
+              "descripcion": "Regate en zigzag agresivo"
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "IND-11",
+              "ejercicio_id": "IND-22",
               "minutos": 5,
-              "descripcion": "Protección y giro"
+              "descripcion": "Protección 360° y salida"
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "IND-15",
+              "ejercicio_id": "IND-23",
               "minutos": 5,
-              "descripcion": "Caza de puertas"
+              "descripcion": "Decisión por colores"
             },
             {
               "tipo": "ejercicio",
@@ -833,9 +833,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-02",
+              "ejercicio_id": "PAR-21",
               "minutos": 5,
-              "descripcion": "Pases a dos toques"
+              "descripcion": "Conducción en espejo con cambios"
             },
             {
               "tipo": "vuelta_calma",
@@ -856,9 +856,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-05",
+              "ejercicio_id": "PAR-21",
               "minutos": 5,
-              "descripcion": "Espejo con balón"
+              "descripcion": "Conducción en espejo con cambios"
             },
             {
               "tipo": "ejercicio",
@@ -886,15 +886,15 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-18",
+              "ejercicio_id": "PAR-22",
               "minutos": 5,
-              "descripcion": "Pase al espacio"
+              "descripcion": "Ruptura, apoyo y descarga"
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-10",
+              "ejercicio_id": "PAR-23",
               "minutos": 5,
-              "descripcion": "Reacción por dos puertas"
+              "descripcion": "Transición y decisión"
             },
             {
               "tipo": "ejercicio",
@@ -910,9 +910,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-03",
+              "ejercicio_id": "PAR-05",
               "minutos": 5,
-              "descripcion": "Pared y devolución"
+              "descripcion": "Espejo con balón"
             },
             {
               "tipo": "vuelta_calma",
@@ -987,9 +987,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-08",
+              "ejercicio_id": "PAR-21",
               "minutos": 5,
-              "descripcion": "Desmarque en diagonal"
+              "descripcion": "Conducción en espejo con cambios"
             },
             {
               "tipo": "vuelta_calma",
@@ -1081,9 +1081,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-08",
+              "ejercicio_id": "PAR-21",
               "minutos": 5,
-              "descripcion": "Desmarque en diagonal"
+              "descripcion": "Conducción en espejo con cambios"
             },
             {
               "tipo": "vuelta_calma",
@@ -1104,9 +1104,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-05",
+              "ejercicio_id": "PAR-21",
               "minutos": 5,
-              "descripcion": "Espejo con balón"
+              "descripcion": "Conducción en espejo con cambios"
             },
             {
               "tipo": "ejercicio",
@@ -1134,15 +1134,15 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-18",
+              "ejercicio_id": "PAR-22",
               "minutos": 5,
-              "descripcion": "Pase al espacio"
+              "descripcion": "Ruptura, apoyo y descarga"
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-10",
+              "ejercicio_id": "PAR-23",
               "minutos": 5,
-              "descripcion": "Reacción por dos puertas"
+              "descripcion": "Transición y decisión"
             },
             {
               "tipo": "ejercicio",
@@ -1158,9 +1158,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-11",
+              "ejercicio_id": "PAR-05",
               "minutos": 5,
-              "descripcion": "Pases en movimiento paralelo"
+              "descripcion": "Espejo con balón"
             },
             {
               "tipo": "vuelta_calma",
@@ -1235,9 +1235,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-13",
+              "ejercicio_id": "PAR-21",
               "minutos": 5,
-              "descripcion": "Pase y doblaje"
+              "descripcion": "Conducción en espejo con cambios"
             },
             {
               "tipo": "vuelta_calma",
@@ -1275,9 +1275,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-05",
+              "ejercicio_id": "PAR-21",
               "minutos": 5,
-              "descripcion": "Espejo con balón"
+              "descripcion": "Conducción en espejo con cambios"
             },
             {
               "tipo": "ejercicio",
@@ -1305,9 +1305,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-18",
+              "ejercicio_id": "PAR-22",
               "minutos": 5,
-              "descripcion": "Pase al espacio"
+              "descripcion": "Ruptura, apoyo y descarga"
             },
             {
               "tipo": "ejercicio",
@@ -1329,9 +1329,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-08",
+              "ejercicio_id": "PAR-05",
               "minutos": 5,
-              "descripcion": "Desmarque en diagonal"
+              "descripcion": "Espejo con balón"
             },
             {
               "tipo": "vuelta_calma",
@@ -1388,9 +1388,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-10",
+              "ejercicio_id": "PAR-23",
               "minutos": 5,
-              "descripcion": "Reacción por dos puertas"
+              "descripcion": "Transición y decisión"
             },
             {
               "tipo": "ejercicio",
@@ -1406,9 +1406,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-11",
+              "ejercicio_id": "PAR-21",
               "minutos": 5,
-              "descripcion": "Pases en movimiento paralelo"
+              "descripcion": "Conducción en espejo con cambios"
             },
             {
               "tipo": "vuelta_calma",
@@ -1429,9 +1429,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-05",
+              "ejercicio_id": "PAR-21",
               "minutos": 5,
-              "descripcion": "Espejo con balón"
+              "descripcion": "Conducción en espejo con cambios"
             },
             {
               "tipo": "ejercicio",
@@ -1459,9 +1459,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-18",
+              "ejercicio_id": "PAR-22",
               "minutos": 5,
-              "descripcion": "Pase al espacio"
+              "descripcion": "Ruptura, apoyo y descarga"
             },
             {
               "tipo": "ejercicio",
@@ -1483,9 +1483,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-13",
+              "ejercicio_id": "PAR-05",
               "minutos": 5,
-              "descripcion": "Pase y doblaje"
+              "descripcion": "Espejo con balón"
             },
             {
               "tipo": "vuelta_calma",

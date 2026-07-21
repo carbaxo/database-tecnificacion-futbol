@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "idioma": "es",
-  "total": 40,
+  "total": 46,
   "licencia": "Uso personal y educativo",
   "campos": [
     "id",
@@ -733,6 +733,114 @@
         "Pase y control hacia puerta alta",
         "Devolución",
         "Control alterno hacia puerta baja"
+      ]
+    },
+    {
+      "id": "IND-21",
+      "nombre": "Regate en zigzag agresivo",
+      "jugadores": 1,
+      "objetivo": "regate",
+      "nivel": "avanzado",
+      "duracion_min": 12,
+      "material": "5 conos, 1 balón",
+      "instrucciones": "Ataca cada cono con una finta de cuerpo y recorta con el exterior al lado contrario, saliendo a máxima velocidad.",
+      "diagram": "ind21regate",
+      "archivo_svg": "svg/ind-21-regate-en-zigzag-agresivo.svg",
+      "archivo_gif": "gif/ind-21-regate-en-zigzag-agresivo.gif",
+      "secuencia_animacion": [
+        "Ataca el cono",
+        "Finta y recorte",
+        "Salida en velocidad"
+      ]
+    },
+    {
+      "id": "IND-22",
+      "nombre": "Protección 360° y salida",
+      "jugadores": 1,
+      "objetivo": "protección",
+      "nivel": "avanzado",
+      "duracion_min": 10,
+      "material": "3 conos, 1 balón",
+      "instrucciones": "Protege el balón girando alrededor del cono central, cambia de perfil y sal en conducción hacia una salida distinta cada vez.",
+      "diagram": "ind22shield",
+      "archivo_svg": "svg/ind-22-proteccion-360-y-salida.svg",
+      "archivo_gif": "gif/ind-22-proteccion-360-y-salida.gif",
+      "secuencia_animacion": [
+        "Protege girando",
+        "Cambia de perfil",
+        "Sal en conducción"
+      ]
+    },
+    {
+      "id": "IND-23",
+      "nombre": "Decisión por colores",
+      "jugadores": 1,
+      "objetivo": "reacción",
+      "nivel": "avanzado",
+      "duracion_min": 10,
+      "material": "4 conos de colores, 1 balón",
+      "instrucciones": "Conduce al centro, levanta la cabeza y sal hacia el color indicado, orientando el control antes de acelerar.",
+      "diagram": "ind23decide",
+      "archivo_svg": "svg/ind-23-decision-por-colores.svg",
+      "archivo_gif": "gif/ind-23-decision-por-colores.gif",
+      "secuencia_animacion": [
+        "Conduce al centro",
+        "Lee el color",
+        "Sal orientado"
+      ]
+    },
+    {
+      "id": "PAR-21",
+      "nombre": "Conducción en espejo con cambios",
+      "jugadores": 2,
+      "objetivo": "conducción",
+      "nivel": "avanzado",
+      "duracion_min": 10,
+      "material": "8 conos, 2 balones",
+      "instrucciones": "Uno marca cambios de dirección y de ritmo dentro de su zona y el otro los replica al instante. Cambiad de líder cada 40 segundos.",
+      "diagram": "par21mirror2",
+      "archivo_svg": "svg/par-21-conduccion-en-espejo-con-cambios.svg",
+      "archivo_gif": "gif/par-21-conduccion-en-espejo-con-cambios.gif",
+      "secuencia_animacion": [
+        "A marca el ritmo",
+        "B replica el gesto",
+        "Cambio sincronizado"
+      ]
+    },
+    {
+      "id": "PAR-22",
+      "nombre": "Ruptura, apoyo y descarga",
+      "jugadores": 2,
+      "objetivo": "desmarque",
+      "nivel": "avanzado",
+      "duracion_min": 12,
+      "material": "4 conos, 1 balón",
+      "instrucciones": "B rompe al espacio y recibe de cara; descarga al apoyo de A, que llega desde atrás para el pase final.",
+      "diagram": "par22break",
+      "archivo_svg": "svg/par-22-ruptura-apoyo-y-descarga.svg",
+      "archivo_gif": "gif/par-22-ruptura-apoyo-y-descarga.gif",
+      "secuencia_animacion": [
+        "B rompe al espacio",
+        "Recibe de cara",
+        "Descarga y pase final"
+      ]
+    },
+    {
+      "id": "PAR-23",
+      "nombre": "Transición y decisión",
+      "jugadores": 2,
+      "objetivo": "reacción",
+      "nivel": "avanzado",
+      "duracion_min": 10,
+      "material": "6 conos, 1 balón",
+      "instrucciones": "A pasa y B decide según la puerta que se abra: devuelve de primeras o gira y sale por el lado contrario.",
+      "diagram": "par23decide",
+      "archivo_svg": "svg/par-23-transicion-y-decision.svg",
+      "archivo_gif": "gif/par-23-transicion-y-decision.gif",
+      "secuencia_animacion": [
+        "A pasa",
+        "B lee la puerta",
+        "Devuelve o gira y sale"
       ]
     }
   ]

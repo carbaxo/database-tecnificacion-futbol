@@ -29,9 +29,9 @@
 - 5 min — **IND-14**: Recorrido en L
 - 5 min — **IND-17**: Pared a un toque
 - 5 min — **IND-10**: Primer toque por colores
-- 5 min — **IND-18**: Doble finta corporal
-- 5 min — **IND-11**: Protección y giro
-- 5 min — **IND-15**: Caza de puertas
+- 5 min — **IND-21**: Regate en zigzag agresivo
+- 5 min — **IND-22**: Protección 360° y salida
+- 5 min — **IND-23**: Decisión por colores
 - 5 min — **IND-20**: Finalización con ambos pies
 - 5 min — **IND-12**: Circuito técnico completo
 - 5 min: Toques suaves, estiramientos y respiración.
@@ -80,9 +80,9 @@
 - 5 min — **IND-14**: Recorrido en L
 - 5 min — **IND-17**: Pared a un toque
 - 5 min — **IND-10**: Primer toque por colores
-- 5 min — **IND-18**: Doble finta corporal
-- 5 min — **IND-11**: Protección y giro
-- 5 min — **IND-15**: Caza de puertas
+- 5 min — **IND-21**: Regate en zigzag agresivo
+- 5 min — **IND-22**: Protección 360° y salida
+- 5 min — **IND-23**: Decisión por colores
 - 5 min — **IND-20**: Finalización con ambos pies
 - 5 min — **IND-12**: Circuito técnico completo
 - 5 min: Toques suaves, estiramientos y respiración.
@@ -116,9 +116,9 @@
 - 5 min — **IND-19**: Giros explosivos 4x4
 - 5 min — **IND-17**: Pared a un toque
 - 5 min — **IND-10**: Primer toque por colores
-- 5 min — **IND-18**: Doble finta corporal
-- 5 min — **IND-11**: Protección y giro
-- 5 min — **IND-15**: Caza de puertas
+- 5 min — **IND-21**: Regate en zigzag agresivo
+- 5 min — **IND-22**: Protección 360° y salida
+- 5 min — **IND-23**: Decisión por colores
 - 5 min — **IND-20**: Finalización con ambos pies
 - 5 min — **IND-12**: Circuito técnico completo
 - 5 min: Toques suaves, estiramientos y respiración.
@@ -146,9 +146,9 @@
 - 5 min — **IND-14**: Recorrido en L
 - 5 min — **IND-17**: Pared a un toque
 - 5 min — **IND-10**: Primer toque por colores
-- 5 min — **IND-18**: Doble finta corporal
-- 5 min — **IND-11**: Protección y giro
-- 5 min — **IND-15**: Caza de puertas
+- 5 min — **IND-21**: Regate en zigzag agresivo
+- 5 min — **IND-22**: Protección 360° y salida
+- 5 min — **IND-23**: Decisión por colores
 - 5 min — **IND-20**: Finalización con ambos pies
 - 5 min — **IND-12**: Circuito técnico completo
 - 5 min: Toques suaves, estiramientos y respiración.
@@ -171,22 +171,22 @@
 - 5 min — **PAR-10**: Reacción por dos puertas
 - 5 min — **PAR-09**: Finalización con asistencia
 - 5 min — **PAR-12**: Combinación y tiro
-- 5 min — **PAR-02**: Pases a dos toques
+- 5 min — **PAR-21**: Conducción en espejo con cambios
 - 5 min: Toques suaves, estiramientos y respiración.
 
 ### Día 2 · Sesión completa B · trabaja todas las áreas
 
 - 5 min: Movilidad, activación y contactos libres con balón, con ambos perfiles.
-- 5 min — **PAR-05**: Espejo con balón
+- 5 min — **PAR-21**: Conducción en espejo con cambios
 - 5 min — **PAR-02**: Pases a dos toques
 - 5 min — **PAR-15**: Control aéreo y apoyo
 - 5 min — **PAR-14**: Reloj de pases
 - 5 min — **PAR-16**: Protección con oposición
-- 5 min — **PAR-18**: Pase al espacio
-- 5 min — **PAR-10**: Reacción por dos puertas
+- 5 min — **PAR-22**: Ruptura, apoyo y descarga
+- 5 min — **PAR-23**: Transición y decisión
 - 5 min — **PAR-19**: Pared, cruce y finalización
 - 5 min — **PAR-12**: Combinación y tiro
-- 5 min — **PAR-03**: Pared y devolución
+- 5 min — **PAR-05**: Espejo con balón
 - 5 min: Toques suaves, estiramientos y respiración.
 
 ### Día 3 · Sesión completa C · trabaja todas las áreas
@@ -201,7 +201,7 @@
 - 5 min — **PAR-10**: Reacción por dos puertas
 - 5 min — **PAR-09**: Finalización con asistencia
 - 5 min — **PAR-12**: Combinación y tiro
-- 5 min — **PAR-08**: Desmarque en diagonal
+- 5 min — **PAR-21**: Conducción en espejo con cambios
 - 5 min: Toques suaves, estiramientos y respiración.
 
 **Progresión:** Semana 1: ejecución limpia y ritmo moderado en todas las áreas. Semana 2: aumenta la velocidad sin perder precisión. Semana 3: prioriza el pie menos hábil y reduce el número de toques. Semana 4: registra tiempos, aciertos y mejor marca en cada bloque.
@@ -222,22 +222,22 @@
 - 5 min — **PAR-10**: Reacción por dos puertas
 - 5 min — **PAR-09**: Finalización con asistencia
 - 5 min — **PAR-12**: Combinación y tiro
-- 5 min — **PAR-08**: Desmarque en diagonal
+- 5 min — **PAR-21**: Conducción en espejo con cambios
 - 5 min: Toques suaves, estiramientos y respiración.
 
 ### Día 2 · Sesión completa B · trabaja todas las áreas
 
 - 5 min: Movilidad, activación y contactos libres con balón, con ambos perfiles.
-- 5 min — **PAR-05**: Espejo con balón
+- 5 min — **PAR-21**: Conducción en espejo con cambios
 - 5 min — **PAR-08**: Desmarque en diagonal
 - 5 min — **PAR-15**: Control aéreo y apoyo
 - 5 min — **PAR-06**: Pase entre puertas
 - 5 min — **PAR-16**: Protección con oposición
-- 5 min — **PAR-18**: Pase al espacio
-- 5 min — **PAR-10**: Reacción por dos puertas
+- 5 min — **PAR-22**: Ruptura, apoyo y descarga
+- 5 min — **PAR-23**: Transición y decisión
 - 5 min — **PAR-19**: Pared, cruce y finalización
 - 5 min — **PAR-12**: Combinación y tiro
-- 5 min — **PAR-11**: Pases en movimiento paralelo
+- 5 min — **PAR-05**: Espejo con balón
 - 5 min: Toques suaves, estiramientos y respiración.
 
 ### Día 3 · Sesión completa C · trabaja todas las áreas
@@ -252,7 +252,7 @@
 - 5 min — **PAR-10**: Reacción por dos puertas
 - 5 min — **PAR-09**: Finalización con asistencia
 - 5 min — **PAR-12**: Combinación y tiro
-- 5 min — **PAR-13**: Pase y doblaje
+- 5 min — **PAR-21**: Conducción en espejo con cambios
 - 5 min: Toques suaves, estiramientos y respiración.
 
 **Progresión:** Semana 1: ejecución limpia y ritmo moderado en todas las áreas. Semana 2: aumenta la velocidad sin perder precisión. Semana 3: prioriza el pie menos hábil y reduce el número de toques. Semana 4: registra tiempos, aciertos y mejor marca en cada bloque.
@@ -264,16 +264,16 @@
 ### Día 1 · Sesión completa A · trabaja todas las áreas
 
 - 5 min: Movilidad, activación y contactos libres con balón, con ambos perfiles.
-- 5 min — **PAR-05**: Espejo con balón
+- 5 min — **PAR-21**: Conducción en espejo con cambios
 - 5 min — **PAR-03**: Pared y devolución
 - 5 min — **PAR-20**: Primer toque alterno
 - 5 min — **PAR-17**: Desafío de puertas cronometrado
 - 5 min — **PAR-07**: Rondo 1 contra 1 con apoyo
-- 5 min — **PAR-18**: Pase al espacio
+- 5 min — **PAR-22**: Ruptura, apoyo y descarga
 - 5 min — **PAR-10**: Reacción por dos puertas
 - 5 min — **PAR-19**: Pared, cruce y finalización
 - 5 min — **PAR-12**: Combinación y tiro
-- 5 min — **PAR-08**: Desmarque en diagonal
+- 5 min — **PAR-05**: Espejo con balón
 - 5 min: Toques suaves, estiramientos y respiración.
 
 ### Día 2 · Sesión completa B · trabaja todas las áreas
@@ -285,25 +285,25 @@
 - 5 min — **PAR-14**: Reloj de pases
 - 5 min — **PAR-16**: Protección con oposición
 - 5 min — **PAR-18**: Pase al espacio
-- 5 min — **PAR-10**: Reacción por dos puertas
+- 5 min — **PAR-23**: Transición y decisión
 - 5 min — **PAR-09**: Finalización con asistencia
 - 5 min — **PAR-12**: Combinación y tiro
-- 5 min — **PAR-11**: Pases en movimiento paralelo
+- 5 min — **PAR-21**: Conducción en espejo con cambios
 - 5 min: Toques suaves, estiramientos y respiración.
 
 ### Día 3 · Sesión completa C · trabaja todas las áreas
 
 - 5 min: Movilidad, activación y contactos libres con balón, con ambos perfiles.
-- 5 min — **PAR-05**: Espejo con balón
+- 5 min — **PAR-21**: Conducción en espejo con cambios
 - 5 min — **PAR-11**: Pases en movimiento paralelo
 - 5 min — **PAR-15**: Control aéreo y apoyo
 - 5 min — **PAR-06**: Pase entre puertas
 - 5 min — **PAR-07**: Rondo 1 contra 1 con apoyo
-- 5 min — **PAR-18**: Pase al espacio
+- 5 min — **PAR-22**: Ruptura, apoyo y descarga
 - 5 min — **PAR-10**: Reacción por dos puertas
 - 5 min — **PAR-19**: Pared, cruce y finalización
 - 5 min — **PAR-12**: Combinación y tiro
-- 5 min — **PAR-13**: Pase y doblaje
+- 5 min — **PAR-05**: Espejo con balón
 - 5 min: Toques suaves, estiramientos y respiración.
 
 **Progresión:** Semana 1: ejecución limpia y ritmo moderado en todas las áreas. Semana 2: aumenta la velocidad sin perder precisión. Semana 3: prioriza el pie menos hábil y reduce el número de toques. Semana 4: registra tiempos, aciertos y mejor marca en cada bloque.

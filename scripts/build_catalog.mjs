@@ -45,6 +45,12 @@ const E = [
   ['PAR-18','Pase al espacio','2','desmarque','intermedio',10,'6 conos, 1 balón','A fija el balón, B rompe entre conos y A envía el pase por delante de su carrera.','throughball'],
   ['PAR-19','Pared, cruce y finalización','2','tiro','avanzado',15,'6 conos, balones, portería','A juega una pared con B, ambos cruzan sus carreras y A finaliza el pase de devolución.','crossfinish'],
   ['PAR-20','Primer toque alterno','2','control','avanzado',10,'8 conos, 1 balón','Cada receptor orienta el primer toque hacia una puerta lateral distinta antes de devolver el pase.','alternate'],
+  ['IND-21','Regate en zigzag agresivo','1','regate','avanzado',12,'5 conos, 1 balón','Ataca cada cono con una finta de cuerpo y recorta con el exterior al lado contrario, saliendo a máxima velocidad.','ind21regate'],
+  ['IND-22','Protección 360° y salida','1','protección','avanzado',10,'3 conos, 1 balón','Protege el balón girando alrededor del cono central, cambia de perfil y sal en conducción hacia una salida distinta cada vez.','ind22shield'],
+  ['IND-23','Decisión por colores','1','reacción','avanzado',10,'4 conos de colores, 1 balón','Conduce al centro, levanta la cabeza y sal hacia el color indicado, orientando el control antes de acelerar.','ind23decide'],
+  ['PAR-21','Conducción en espejo con cambios','2','conducción','avanzado',10,'8 conos, 2 balones','Uno marca cambios de dirección y de ritmo dentro de su zona y el otro los replica al instante. Cambiad de líder cada 40 segundos.','par21mirror2'],
+  ['PAR-22','Ruptura, apoyo y descarga','2','desmarque','avanzado',12,'4 conos, 1 balón','B rompe al espacio y recibe de cara; descarga al apoyo de A, que llega desde atrás para el pase final.','par22break'],
+  ['PAR-23','Transición y decisión','2','reacción','avanzado',10,'6 conos, 1 balón','A pasa y B decide según la puerta que se abra: devuelve de primeras o gira y sale por el lado contrario.','par23decide'],
 ].map(([id,nombre,jugadores,objetivo,nivel,duracion_min,material,instrucciones,diagram])=>({id,nombre,jugadores:+jugadores,objetivo,nivel,duracion_min,material,instrucciones,diagram}));
 
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
@@ -101,6 +107,12 @@ function diagram(type){
   case 'throughball': s+=player(105,280,'A')+player(280,265,'B','#e63946')+ball(130,290)+cs([[210,220],[210,270],[355,160],[355,210],[450,110],[450,300]])+run('M285 250 C320 190 360 150 430 120')+pass('M135 280 C250 250 330 175 420 120');break;
   case 'crossfinish': s+=player(95,275,'A')+player(300,230,'B','#e63946')+ball(120,285)+cs([[85,290],[250,245],[330,245],[430,180],[460,310]])+goal(390,70,120)+pass('M125 275 L285 230')+run('M125 260 C230 165 310 165 410 130')+run('M305 245 C260 285 220 300 180 310')+pass('M300 220 L405 125');break;
   case 'alternate': s+=player(115,220,'A')+player(440,220,'B','#e63946')+ball(140,230)+cs([[220,130],[220,180],[220,270],[220,320],[345,130],[345,180],[345,270],[345,320]])+pass('M145 220 L420 220')+run('M420 215 L350 150 M420 225 L350 295 M145 215 L215 150 M145 225 L215 295');break;
+  case 'ind21regate': s+=player(80,285,'1')+ball(105,295)+cs([[160,255],[240,200],[320,255],[400,200],[470,255]])+run('M110 290 C145 305 135 240 165 250 S205 285 240 205 S285 195 320 250 S365 280 400 205 S445 195 475 250');break;
+  case 'ind22shield': s+=player(280,205,'1')+ball(300,220)+cs([[280,225],[120,120],[440,300]])+run('M300 225 C345 205 340 255 300 255 C265 255 268 210 300 205 M300 250 C350 250 385 290 435 300')+run('M300 240 L135 130');break;
+  case 'ind23decide': s+=player(280,215,'1')+ball(300,225)+cs([[175,120],[400,120],[175,320],[400,320]],['#ef4444','#3b82f6','#facc15','#22c55e'])+run('M300 220 L200 140 M300 225 L385 305');break;
+  case 'par21mirror2': s+=player(180,215,'A')+player(380,215,'B','#e63946')+ball(205,225)+ball(405,225)+cs([[90,115],[250,115],[250,320],[90,320],[310,115],[470,115],[470,320],[310,320]])+run('M205 225 C230 175 145 150 145 225')+run('M405 225 C430 175 345 150 345 225');break;
+  case 'par22break': s+=player(95,285,'A')+player(280,260,'B','#e63946')+ball(120,295)+cs([[210,220],[355,150],[450,110],[190,320]])+goal(390,70,120)+run('M285 250 C320 190 360 150 425 118')+run('M120 275 L250 250')+pass('M125 285 C250 250 340 175 425 120')+pass('M290 250 L245 255');break;
+  case 'par23decide': s+=player(145,215,'A')+player(320,215,'B','#e63946')+ball(175,225)+cs([[420,120],[420,175],[420,270],[420,320]],['#facc15','#facc15','#3b82f6','#3b82f6'])+pass('M180 220 L305 220')+run('M335 210 L415 145')+run('M335 225 L415 295');break;
  }
  return s;
 }

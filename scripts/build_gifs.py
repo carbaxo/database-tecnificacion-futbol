@@ -128,6 +128,24 @@ M.update({
 'PAR-20':dict(a=K([(.18,.55),(.18,.55),(.32,.28),(.18,.55),(.18,.55),(.32,.82),(.18,.55)],[0,.18,.34,.48,.66,.82,1]),b=K([(.82,.55),(.68,.28),(.82,.55),(.82,.55),(.68,.82),(.82,.55)],[0,.18,.34,.66,.82,1]),ball=K([(.18,.55),(.82,.55),(.68,.28),(.82,.55),(.18,.55),(.32,.82),(.18,.55)],[0,.18,.34,.48,.66,.82,1]),fases=['Pase y control hacia puerta alta','Devolución','Control alterno hacia puerta baja']),
 })
 
+# Ejercicios avanzados añadidos a la biblioteca.
+C.update({
+'IND-21':dict(a=[(.10,.78),(.24,.68),(.34,.48),(.48,.68),(.60,.44),(.74,.66),(.90,.40)],cones=[(.24,.66),(.36,.48),(.48,.66),(.62,.44),(.76,.64)]),
+'IND-22':dict(a=[(.50,.56),(.43,.47),(.50,.40),(.58,.48),(.51,.58),(.44,.50),(.22,.24)],cones=[(.50,.52),(.22,.22),(.80,.80)]),
+'IND-23':dict(a=[(.50,.56),(.50,.56),(.28,.24),(.50,.56),(.74,.80)],cones=[(.26,.22),(.74,.22),(.26,.82),(.74,.82)],colors=True),
+'PAR-21':dict(a=[(.24,.60),(.34,.34),(.20,.30),(.30,.70),(.24,.60)],b=[(.66,.60),(.76,.34),(.62,.30),(.72,.70),(.66,.60)],cones=[(.10,.18),(.42,.18),(.42,.84),(.10,.84),(.58,.18),(.90,.18),(.90,.84),(.58,.84)],two_balls=True),
+'PAR-22':dict(a=[(.16,.80),(.34,.64),(.46,.58)],b=[(.42,.74),(.58,.46),(.76,.26)],cones=[(.34,.62),(.58,.40),(.84,.16),(.16,.84)],ball=[(.18,.78),(.60,.44),(.46,.58),(.80,.24)]),
+'PAR-23':dict(a=[(.20,.55),(.20,.55)],b=[(.62,.55),(.80,.30),(.62,.55),(.80,.80)],cones=[(.80,.20),(.80,.38),(.80,.68),(.80,.86),(.20,.55),(.62,.55)],ball=[(.20,.55),(.62,.55),(.80,.30),(.62,.55),(.80,.80)]),
+})
+M.update({
+'IND-21':dict(a=K(C['IND-21']['a']),ball='follow_a',fases=['Ataca el cono','Finta y recorte','Salida en velocidad']),
+'IND-22':dict(a=K([(.50,.56),(.43,.47),(.50,.40),(.58,.48),(.51,.58),(.44,.50),(.22,.24)],[0,.16,.32,.48,.62,.76,1]),ball='follow_a',fases=['Protege girando','Cambia de perfil','Sal en conducción']),
+'IND-23':dict(a=K([(.50,.56),(.50,.56),(.28,.24),(.50,.56),(.74,.80)],[0,.28,.56,.78,1]),ball='follow_a',fases=['Conduce al centro','Lee el color','Sal orientado']),
+'PAR-21':dict(a=K(C['PAR-21']['a']),b=K(C['PAR-21']['b']),ball='two_follow',fases=['A marca el ritmo','B replica el gesto','Cambio sincronizado']),
+'PAR-22':dict(a=K([(.16,.80),(.16,.80),(.34,.64),(.46,.58),(.46,.58)],[0,.24,.5,.74,1]),b=K([(.42,.74),(.55,.50),(.60,.44),(.58,.50),(.60,.44)],[0,.3,.5,.7,1]),ball=K([(.18,.78),(.18,.78),(.60,.44),(.46,.58),(.80,.24)],[0,.24,.5,.74,1]),fases=['B rompe al espacio','Recibe de cara','Descarga y pase final']),
+'PAR-23':dict(a=K([(.20,.55),(.20,.55)]),b=K([(.62,.55),(.62,.55),(.80,.30),(.62,.55),(.80,.80)],[0,.3,.55,.75,1]),ball=K([(.20,.55),(.62,.55),(.80,.30),(.62,.55),(.80,.80)],[0,.3,.55,.75,1]),fases=['A pasa','B lee la puerta','Devuelve o gira y sale']),
+})
+
 def xy(p):
     x0,y0,x1,y1=FIELD
     return (x0+p[0]*(x1-x0), y0+p[1]*(y1-y0))
@@ -255,12 +273,8 @@ def base(ex,cfg):
     d.text((45,393),'Blanco: jugador/conducción   ·   Amarillo: pase o recorrido del balón',font=SMALL,fill='#486581')
     return im
 
-data=json.loads((ROOT/'ejercicios.json').read_text(encoding='utf-8-sig'))
-selected=set(sys.argv[1:])
-generated=0
-for ex in data['ejercicios']:
-    if selected and ex['id'] not in selected:
-        continue
+def render_frames(ex):
+    """Genera los fotogramas del GIF de un ejercicio a partir de C[id] y M[id]."""
     cfg=C[ex['id']]; anim=M[ex['id']]; frames=[]
     for i in range(FRAMES):
         t=i/(FRAMES-1)
@@ -294,31 +308,31 @@ for ex in data['ejercicios']:
         # Etiqueta contextual y barra temporal.
         idx=min(len(anim['fases'])-1,int(move*len(anim['fases'])))
         phase=anim['fases'][idx].upper()
-        passing=any(w in phase for w in ('PASE','DEVOLUCIÓN','PARED','ENVÍA','ASISTENCIA'))
+        passing=any(w in phase for w in ('PASE','DEVOLUCIÓN','PARED','ENVÍA','ASISTENCIA','DESCARGA'))
         color='#e6a800' if passing else ('#d9485f' if 'TIRO' in phase or 'FINALIZA' in phase else '#1778d4')
         d.rounded_rectangle((43,77,43+d.textbbox((0,0),phase,font=SMALL)[2]+22,101),12,fill=color)
         d.text((54,89),phase,font=SMALL,anchor='lm',fill='white')
         d.rounded_rectangle((45,407,595,411),2,fill='#dbe4ec')
         d.rounded_rectangle((45,407,45+550*move,411),2,fill=color)
         frames.append(im.quantize(colors=128,method=Image.Quantize.MEDIANCUT))
+    return frames,anim['fases']
+
+def save_gif(ex):
+    frames,fases=render_frames(ex)
     name=Path(ex['archivo_svg']).stem+'.gif'
     frames[0].save(GIF/name,save_all=True,append_images=frames[1:],duration=85,loop=0,optimize=True,disposal=2)
-    ex['archivo_gif']='gif/'+name
-    ex['secuencia_animacion']=anim['fases']
-    generated+=1
+    return 'gif/'+name,fases
 
-(ROOT/'ejercicios.json').write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
-# El catálogo muestra la animación; el SVG sigue disponible en la base de datos.
-html=(ROOT/'index.html').read_text(encoding='utf-8')
-for ex in data['ejercicios']:
-    html=html.replace(f'src="{ex["archivo_svg"]}"',f'src="{ex["archivo_gif"]}"')
-    instruction=htmlmod.escape(ex['instrucciones'])
-    sequence=' → '.join(htmlmod.escape(x) for x in ex.get('secuencia_animacion',[]))
-    html=html.replace(f'<p>{instruction}</p>',f'<p>{instruction}</p><p><b>Secuencia:</b> {sequence}</p>')
-html=html.replace(f"{len(data['ejercicios'])} ejercicios para entrenar solo o por parejas",f"{len(data['ejercicios'])} ejercicios animados para entrenar solo o por parejas")
-(ROOT/'index.html').write_text(html,encoding='utf-8')
-with (ROOT/'ejercicios.csv').open('w',encoding='utf-8-sig',newline='') as f:
-    fields=['id','nombre','jugadores','objetivo','nivel','duracion_min','material','instrucciones','archivo_svg','archivo_gif']
-    w=csv.DictWriter(f,fieldnames=fields); w.writeheader()
-    for ex in data['ejercicios']: w.writerow({k:ex.get(k,'') for k in fields})
-print(f"GIF generados: {generated}")
+# Ejecutado directamente: regenera todos los GIF y reescribe la base y el catálogo.
+# Importado como módulo (build_extra.py) solo expone C, M y las funciones del motor.
+if __name__=='__main__':
+    data=json.loads((ROOT/'ejercicios.json').read_text(encoding='utf-8-sig'))
+    selected=set(sys.argv[1:])
+    generated=0
+    for ex in data['ejercicios']:
+        if selected and ex['id'] not in selected:
+            continue
+        ex['archivo_gif'],ex['secuencia_animacion']=save_gif(ex)
+        generated+=1
+    (ROOT/'ejercicios.json').write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
+    print(f"GIF generados: {generated}")
