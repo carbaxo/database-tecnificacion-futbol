@@ -24,6 +24,12 @@ Los SVG son editables en navegadores, Inkscape, Illustrator, Figma y Canva. Cada
 
 Se incluyen 12 planes de cuatro semanas: individual o por parejas, niveles iniciación, intermedio y avanzado, y sesiones de 30 o 60 minutos. Todos se organizan en tres días por semana.
 
+## App instalable (PWA)
+
+El sitio funciona como aplicación instalable en Android (y escritorio): incluye `manifest.webmanifest`, iconos adaptativos y un service worker (`sw.js`) que guarda en caché los ejercicios ya vistos para poder entrenar sin conexión. Durante el modo entrenamiento la pantalla se mantiene encendida, el cronómetro sigue la hora real aunque la app pase a segundo plano, el móvil vibra al terminar cada bloque y el botón atrás cierra las fichas y el entrenamiento en lugar de salir de la app.
+
+Para regenerar los iconos: `OUTPUT_DIR=. python3 scripts/build_icons.py` (requiere Pillow). Al publicar cambios, incrementa `VERSION` en `sw.js` para invalidar la caché.
+
 ## Regenerar la colección
 
 Requiere Node.js y Python con Pillow instalado.

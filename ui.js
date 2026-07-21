@@ -13,7 +13,42 @@
   const stats = isPlans
     ? [['12', 'planes guiados'], ['3', 'días por semana'], ['4', 'semanas de progreso'], ['30 / 60', 'minutos por sesión']]
     : [['40', 'ejercicios animados'], ['20', 'individuales'], ['20', 'por parejas'], ['3', 'niveles de juego']];
-  header.innerHTML = `<nav class="site-nav" aria-label="Navegación principal"><a class="brand" href="index.html"><span class="brand-mark">⚽</span>Fútbol técnico</a><a class="nav-link" href="${isPlans ? 'index.html' : 'planes.html'}">${isPlans ? '← Ejercicios' : 'Planes semanales →'}</a></nav><div class="hero"><div><div class="eyebrow">Tecnificación de fútbol</div><h1>${title}</h1><p class="hero-copy">${description}</p><a class="hero-action" href="${ctaHref}">${cta}</a></div><div class="hero-stats">${stats.map(([value,label]) => `<div class="hero-stat"><strong>${value}</strong><span>${label}</span></div>`).join('')}</div></div>`;
+  header.innerHTML = `<nav class="site-nav" aria-label="Navegación principal"><a class="brand" href="index.html"><span class="brand-mark">⚽</span>Fútbol técnico</a><div class="nav-actions"><a class="nav-link" href="${isPlans ? 'index.html' : 'planes.html'}">${isPlans ? '← Ejercicios' : 'Planes semanales →'}</a></div></nav><div class="hero"><div><div class="eyebrow">Tecnificación de fútbol</div><h1>${title}</h1><p class="hero-copy">${description}</p><a class="hero-action" href="${ctaHref}">${cta}</a></div><div class="hero-stats">${stats.map(([value,label]) => `<div class="hero-stat"><strong>${value}</strong><span>${label}</span></div>`).join('')}</div></div>`;
+
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+
+  let installPrompt;
+  window.addEventListener('beforeinstallprompt', event => {
+    event.preventDefault();
+    installPrompt = event;
+    const actions = header.querySelector('.nav-actions');
+    if (!actions || actions.querySelector('.install-button')) return;
+    const button = document.createElement('button');
+    button.className = 'install-button';
+    button.type = 'button';
+    button.textContent = 'Instalar app';
+    button.addEventListener('click', async () => {
+      button.disabled = true;
+      await installPrompt?.prompt();
+      installPrompt = null;
+      button.remove();
+    });
+    actions.prepend(button);
+  });
+
+  // El botón atrás de Android cierra el diálogo abierto en lugar de salir de la app.
+  let closingFromHistory = false;
+  const openDialog = dialog => {
+    dialog.showModal();
+    history.pushState({ dialog: true }, '');
+  };
+  const trackDialog = dialog => dialog.addEventListener('close', () => {
+    if (!closingFromHistory && history.state?.dialog) history.back();
+  });
+  window.addEventListener('popstate', () => {
+    const open = document.querySelector('dialog[open]');
+    if (open) { closingFromHistory = true; open.close(); closingFromHistory = false; }
+  });
 
   const filters = document.querySelector('.filters');
   const main = document.querySelector('main');
@@ -62,6 +97,7 @@
     dialog.className = 'exercise-modal';
     dialog.innerHTML = `<button class="modal-close" type="button" aria-label="Cerrar ficha">×</button><div class="modal-content"><div class="modal-media"><img alt="" /></div><div class="modal-copy"><span class="modal-kicker">Ejercicio del plan</span><h2></h2><p class="modal-meta"></p><div class="modal-description"></div><dl class="modal-facts"></dl></div></div>`;
     document.body.append(dialog);
+    trackDialog(dialog);
     const modalImage = dialog.querySelector('img');
     const modalTitle = dialog.querySelector('h2');
     const modalMeta = dialog.querySelector('.modal-meta');
@@ -75,7 +111,7 @@
       return new Map(data.ejercicios.map(exercise => [exercise.id, { ...exercise, gif: gifs.get(exercise.id) }]));
     });
     const openExercise = async id => {
-      modalTitle.textContent = 'Cargando ejercicio…'; modalMeta.textContent = ''; modalDescription.innerHTML = ''; modalFacts.innerHTML = ''; modalImage.removeAttribute('src'); dialog.showModal();
+      modalTitle.textContent = 'Cargando ejercicio…'; modalMeta.textContent = ''; modalDescription.innerHTML = ''; modalFacts.innerHTML = ''; modalImage.removeAttribute('src'); openDialog(dialog);
       try {
         const exercise = (await loadDetails()).get(id);
         if (!exercise) throw new Error('Ejercicio no encontrado');
@@ -99,6 +135,7 @@
     workoutDialog.className = 'workout-modal';
     workoutDialog.innerHTML = `<button class="workout-close" type="button" aria-label="Cerrar entrenamiento">×</button><div class="workout-setup"></div><div class="workout-run hide"><div class="workout-topline"><span class="workout-plan-name"></span><span class="workout-progress-label"></span></div><div class="workout-progress"><i></i></div><div class="workout-body"><div class="workout-visual"><img alt="" /><div class="workout-placeholder">⚽<span>Preparad el espacio<br>y disfrutad del entrenamiento</span></div></div><div class="workout-copy"><span class="workout-type"></span><h2></h2><p class="workout-time">00:00</p><p class="workout-description"></p><p class="workout-coach"></p></div></div><div class="workout-controls"><button type="button" class="workout-back">← Anterior</button><button type="button" class="workout-timer">▶ Iniciar</button><button type="button" class="workout-next">Siguiente →</button></div></div>`;
     document.body.append(workoutDialog);
+    trackDialog(workoutDialog);
     const setup = workoutDialog.querySelector('.workout-setup');
     const run = workoutDialog.querySelector('.workout-run');
     const workoutTitle = workoutDialog.querySelector('.workout-copy h2');
@@ -116,6 +153,13 @@
     const nextButton = workoutDialog.querySelector('.workout-next');
     let plansPromise;
     let workoutState = { plan: null, session: null, index: 0, seconds: 0, running: false, timer: null };
+    // Mantiene la pantalla encendida durante la sesión de entrenamiento.
+    let wakeLock = null;
+    const requestWakeLock = () => { navigator.wakeLock?.request('screen').then(lock => { wakeLock = lock; }).catch(() => {}); };
+    const releaseWakeLock = () => { wakeLock?.release().catch(() => {}); wakeLock = null; };
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible' && workoutDialog.open && !run.classList.contains('hide')) requestWakeLock();
+    });
     const loadPlans = () => plansPromise ||= globalThis.TRAINING_DATA?.plans ? Promise.resolve(globalThis.TRAINING_DATA.plans) : fetch('planes_entrenamiento.json').then(response => response.json()).then(data => data.planes);
     const planFromCard = card => ({
       nombre: card.querySelector('h2')?.textContent || 'Plan de entrenamiento',
@@ -163,6 +207,7 @@
       workoutState = { plan, session, index: 0, seconds: 0, running: false, timer: null };
       setup.classList.add('hide'); run.classList.remove('hide');
       planLabel.textContent = `${plan.nombre} · Día ${session.dia}`;
+      requestWakeLock();
       renderStep();
     };
     const chooseDay = plan => {
@@ -170,14 +215,25 @@
       setup.classList.remove('hide'); run.classList.add('hide');
       setup.innerHTML = `<span class="workout-eyebrow">Modo entrenar</span><h2>${escape(plan.nombre)}</h2><p>Elige el día de hoy. La sesión te acompañará paso a paso y el cronómetro se reinicia en cada bloque.</p><div class="day-picker">${plan.sesiones.map(session => `<button type="button" data-day="${session.dia}"><strong>Día ${session.dia}</strong><span>${escape(session.titulo)}</span><small>${session.duracion_min} min · ${session.bloques.length} bloques</small></button>`).join('')}</div><p class="workout-note">Puedes pausar, repetir o avanzar cuando lo necesitéis.</p>`;
       setup.querySelectorAll('[data-day]').forEach(button => button.addEventListener('click', () => startSession(plan, plan.sesiones.find(session => session.dia === Number(button.dataset.day)))));
-      workoutDialog.showModal();
+      openDialog(workoutDialog);
     };
     workoutDialog.querySelector('.workout-close').addEventListener('click', () => { stopTimer(); workoutDialog.close(); });
-    workoutDialog.addEventListener('close', stopTimer);
+    workoutDialog.addEventListener('close', () => { stopTimer(); releaseWakeLock(); });
     timerButton.addEventListener('click', () => {
       if (workoutState.running) return stopTimer();
+      if (workoutState.seconds <= 0) return;
       workoutState.running = true; timerButton.textContent = 'Ⅱ Pausar';
-      workoutState.timer = setInterval(() => { if (workoutState.seconds > 0) { workoutState.seconds--; updateTimer(); } else { stopTimer(); workoutCoach.textContent = '¡Tiempo completado! Cuando estéis listos, pasad al siguiente bloque.'; } }, 1000);
+      // Cuenta atrás anclada a la hora real: sigue siendo exacta aunque el sistema pause los temporizadores en segundo plano.
+      const deadline = Date.now() + workoutState.seconds * 1000;
+      workoutState.timer = setInterval(() => {
+        workoutState.seconds = Math.max(0, Math.round((deadline - Date.now()) / 1000));
+        updateTimer();
+        if (workoutState.seconds === 0) {
+          stopTimer();
+          navigator.vibrate?.([250, 120, 250]);
+          workoutCoach.textContent = '¡Tiempo completado! Cuando estéis listos, pasad al siguiente bloque.';
+        }
+      }, 250);
     });
     previousButton.addEventListener('click', () => { if (workoutState.index > 0) { workoutState.index--; renderStep(); } });
     nextButton.addEventListener('click', () => { if (workoutState.index < workoutState.session.bloques.length - 1) { workoutState.index++; renderStep(); } else { stopTimer(); run.classList.add('hide'); setup.classList.remove('hide'); setup.innerHTML = `<span class="workout-eyebrow">¡Entrenamiento completado!</span><h2>Muy buen trabajo</h2><p>Habéis terminado la sesión. Cerrad con unos minutos tranquilos, agua y una felicitación por el esfuerzo.</p><button type="button" class="finish-workout">Cerrar</button>`; setup.querySelector('.finish-workout').addEventListener('click', () => workoutDialog.close()); } });
