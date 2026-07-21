@@ -92,6 +92,12 @@
   window.addEventListener('offline', syncOffline);
   syncOffline();
 
+  // Barra de navegación inferior tipo app.
+  const bottomNav = document.createElement('nav');
+  bottomNav.className = 'bottom-nav';
+  bottomNav.innerHTML = `<a class="bn-item ${isPlans ? '' : 'active'}" href="index.html"><span class="bn-ico">⚽</span>Ejercicios</a><a class="bn-item ${isPlans ? 'active' : ''}" href="planes.html"><span class="bn-ico">🗓️</span>Planes</a>`;
+  document.body.append(bottomNav);
+
   const filters = document.querySelector('.filters');
   const main = document.querySelector('main');
   if (!filters || !main) return;
@@ -162,7 +168,7 @@
   // Ficha de ejercicio (modal compartido por catálogo y planes).
   const dialog = document.createElement('dialog');
   dialog.className = 'exercise-modal';
-  dialog.innerHTML = `<button class="modal-close" type="button" aria-label="Cerrar ficha">×</button><div class="modal-content"><div class="modal-media"><img alt="" /></div><div class="modal-copy"><span class="modal-kicker">${isPlans ? 'Ejercicio del plan' : 'Ficha del ejercicio'}</span><h2></h2><p class="modal-meta"></p><div class="modal-description"></div><dl class="modal-facts"></dl><button class="share-exercise" type="button">Compartir ejercicio</button></div></div>`;
+  dialog.innerHTML = `<button class="modal-close" type="button" aria-label="Cerrar ficha">×</button><div class="modal-content"><div class="modal-media"><img alt="" /></div><div class="modal-copy"><span class="modal-kicker">${isPlans ? 'Ejercicio del plan' : 'Ficha del ejercicio'}</span><h2></h2><p class="modal-meta"></p><div class="modal-description"></div><ol class="modal-steps"></ol><dl class="modal-facts"></dl><button class="share-exercise" type="button">Compartir ejercicio</button></div></div>`;
   document.body.append(dialog);
   trackDialog(dialog);
   const modalImage = dialog.querySelector('img');
@@ -170,17 +176,20 @@
   const modalMeta = dialog.querySelector('.modal-meta');
   const modalDescription = dialog.querySelector('.modal-description');
   const modalFacts = dialog.querySelector('.modal-facts');
+  const modalSteps = dialog.querySelector('.modal-steps');
   const shareButton = dialog.querySelector('.share-exercise');
   const openExercise = async id => {
     dialog.dataset.exercise = id || '';
-    modalTitle.textContent = 'Cargando ejercicio…'; modalMeta.textContent = ''; modalDescription.innerHTML = ''; modalFacts.innerHTML = ''; modalImage.removeAttribute('src'); openDialog(dialog);
+    modalTitle.textContent = 'Cargando ejercicio…'; modalMeta.innerHTML = ''; modalDescription.innerHTML = ''; modalFacts.innerHTML = ''; modalSteps.innerHTML = ''; modalImage.removeAttribute('src'); openDialog(dialog);
     try {
       const exercise = (await loadDetails()).get(id);
       if (!exercise) throw new Error('Ejercicio no encontrado');
       modalImage.src = mediaFor(exercise);
       modalImage.alt = `Demostración animada de ${exercise.nombre}`;
       modalTitle.textContent = `${exercise.id} · ${exercise.nombre}`;
-      modalMeta.textContent = `${exercise.jugadores} jugador${exercise.jugadores > 1 ? 'es' : ''} · ${exercise.nivel} · ${exercise.duracion_min} min`;
+      modalMeta.innerHTML = `<span>${exercise.jugadores} jugador${exercise.jugadores > 1 ? 'es' : ''}</span><span>${escape(exercise.nivel)}</span><span>${escape(exercise.duracion_min)} min</span>`;
+      const pasos = exercise.secuencia_animacion || [];
+      modalSteps.innerHTML = pasos.map(step => `<li><span>${escape(step)}</span></li>`).join('');
       modalDescription.innerHTML = `<p>${escape(exercise.instrucciones)}</p><p>Prepara ${escape(exercise.material.toLowerCase())} y empieza a un ritmo controlado. Mantén una postura activa, la cabeza levantada cuando el recorrido lo permita y el balón siempre a una distancia que puedas dominar. Repite el gesto alternando perfiles o pies, priorizando precisión y limpieza técnica antes de aumentar la velocidad.</p><p><strong>Clave de mejora:</strong> termina cada repetición con el control orientado hacia la siguiente acción. Si pierdes el balón o la calidad del gesto, baja el ritmo, corrige la postura y vuelve a intentarlo.</p>`;
       modalFacts.innerHTML = `<div><dt>Objetivo</dt><dd>${escape(exercise.objetivo)}</dd></div><div><dt>Material</dt><dd>${escape(exercise.material)}</dd></div><div><dt>Tiempo sugerido</dt><dd>${escape(exercise.duracion_min)} minutos</dd></div>`;
     } catch { modalTitle.textContent = 'No se pudo cargar este ejercicio'; modalDescription.innerHTML = '<p>Vuelve a intentarlo en unos segundos.</p>'; }
@@ -208,6 +217,12 @@
       const id = card.querySelector('b')?.textContent.match(/\b(?:IND|PAR)-\d{2}\b/)?.[0];
       if (!id) return;
       card.dataset.id = id;
+      if (card.dataset.n) {
+        const level = document.createElement('span');
+        level.className = `card-level n-${card.dataset.n}`;
+        level.textContent = card.dataset.n;
+        card.prepend(level);
+      }
       const star = document.createElement('button');
       star.className = 'fav-toggle';
       star.type = 'button';
