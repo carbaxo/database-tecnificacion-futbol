@@ -18,7 +18,7 @@
   const cta = isPlans ? 'Explorar sesiones' : 'Ver planes de entrenamiento';
   const ctaHref = isPlans ? '#planes' : 'planes.html';
   const stats = isPlans
-    ? [['12', 'planes guiados'], ['3', 'días por semana'], ['4', 'semanas de progreso'], ['30 / 60', 'minutos por sesión']]
+    ? [['6', 'planes guiados'], ['3', 'días por semana'], ['4', 'semanas de progreso'], ['60', 'minutos por sesión']]
     : [['40', 'ejercicios animados'], ['20', 'individuales'], ['20', 'por parejas'], ['3', 'niveles de juego']];
   header.innerHTML = `<nav class="site-nav" aria-label="Navegación principal"><a class="brand" href="index.html"><span class="brand-mark">⚽</span>Fútbol técnico</a><div class="nav-actions"><a class="nav-link" href="${isPlans ? 'index.html' : 'planes.html'}">${isPlans ? '← Ejercicios' : 'Planes semanales →'}</a></div></nav><div class="hero"><div><div class="eyebrow">Tecnificación de fútbol</div><h1>${title}</h1><p class="hero-copy">${description}</p><a class="hero-action" href="${ctaHref}">${cta}</a></div><div class="hero-stats">${stats.map(([value,label]) => `<div class="hero-stat"><strong>${value}</strong><span>${label}</span></div>`).join('')}</div></div>`;
 
@@ -400,7 +400,7 @@
         workoutImage.src = mediaFor(exercise);
         workoutImage.alt = `Demostración animada de ${exercise.nombre}`;
         workoutDescription.textContent = exercise.instrucciones;
-        workoutCoach.textContent = `Material: ${exercise.material}. ${exercise.duracion_min} min sugeridos. Mantén la cabeza levantada cuando sea posible y prioriza el control antes de subir la velocidad.`;
+        workoutCoach.textContent = `Material: ${exercise.material}. ${block.minutos} min en este bloque. Mantén la cabeza levantada cuando sea posible y prioriza el control antes de subir la velocidad.`;
       }
     };
     const startSession = (plan, session) => {

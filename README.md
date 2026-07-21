@@ -23,7 +23,7 @@ Los SVG son editables en navegadores, Inkscape, Illustrator, Figma y Canva. Cada
 
 ## Planes disponibles
 
-Se incluyen 12 planes de cuatro semanas: individual o por parejas, niveles iniciación, intermedio y avanzado, y sesiones de 30 o 60 minutos. Todos se organizan en tres días por semana.
+Se incluyen 6 planes de cuatro semanas: individual o por parejas y niveles iniciación, intermedio y avanzado. Todos se organizan en tres días por semana y cada sesión dura 60 minutos trabajando todas las áreas técnicas: 10 ejercicios de 5 minutos más calentamiento y vuelta a la calma.
 
 ## App instalable (PWA)
 
