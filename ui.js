@@ -24,6 +24,30 @@
 
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 
+  // Tema: sigue el sistema por defecto y recuerda tu elección manual en el dispositivo.
+  const root = document.documentElement;
+  const systemDark = matchMedia('(prefers-color-scheme: dark)');
+  const applyTheme = theme => { root.dataset.theme = theme; };
+  applyTheme(store.get('ft:tema', null) || (systemDark.matches ? 'dark' : 'light'));
+  systemDark.addEventListener('change', () => { if (!store.get('ft:tema', null)) applyTheme(systemDark.matches ? 'dark' : 'light'); });
+  const themeButton = document.createElement('button');
+  themeButton.className = 'theme-toggle';
+  themeButton.type = 'button';
+  const syncThemeButton = () => {
+    const dark = root.dataset.theme === 'dark';
+    themeButton.textContent = dark ? '☀️' : '🌙';
+    themeButton.setAttribute('aria-label', dark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+    themeButton.title = themeButton.getAttribute('aria-label');
+  };
+  syncThemeButton();
+  themeButton.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    store.set('ft:tema', next);
+    applyTheme(next);
+    syncThemeButton();
+  });
+  header.querySelector('.nav-actions')?.prepend(themeButton);
+
   let installPrompt;
   window.addEventListener('beforeinstallprompt', event => {
     event.preventDefault();

@@ -13,11 +13,14 @@ a,button,select,input,.exercise-link,.card{touch-action:manipulation;-webkit-tap
 .install-button{border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:#fff;font:800 .8rem inherit;height:38px;padding:0 .85rem;border-radius:999px;cursor:pointer;transition:background .2s}
 .install-button:hover{background:rgba(255,255,255,.22)}
 .install-button:disabled{opacity:.6;cursor:wait}
+.theme-toggle{width:38px;height:38px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:#fff;font-size:1.02rem;line-height:1;border-radius:999px;cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .15s}
+.theme-toggle:hover{background:rgba(255,255,255,.22)}
+.theme-toggle:active{transform:scale(.92)}
 .site-nav{height:auto;min-height:72px;padding-top:env(safe-area-inset-top)}
 .exercise-modal,.workout-modal{overscroll-behavior:contain}
 .hero-action:active,.start-workout:active,.workout-controls button:active,.day-picker button:active,.install-button:active{transform:scale(.97)!important}
 .card:active{transform:scale(.985)!important}
-@media(max-width:620px){.site-nav{min-height:62px}.filter-field select{height:48px}.search-wrap input{height:48px;font-size:16px}.search-wrap:before{top:.78rem}.filter-field:after{top:.85rem}.reset-button{height:48px}.install-button{height:34px;font-size:.72rem;padding:0 .65rem}.workout-controls{padding-bottom:calc(.8rem + env(safe-area-inset-bottom))}.workout-controls button{min-height:50px}.modal-close,.workout-close{width:2.75rem;height:2.75rem}}
+@media(max-width:620px){.site-nav{min-height:62px}.filter-field select{height:48px}.search-wrap input{height:48px;font-size:16px}.search-wrap:before{top:.78rem}.filter-field:after{top:.85rem}.reset-button{height:48px}.install-button{height:34px;font-size:.72rem;padding:0 .65rem}.theme-toggle{width:34px;height:34px;font-size:.95rem}.workout-controls{padding-bottom:calc(.8rem + env(safe-area-inset-bottom))}.workout-controls button{min-height:50px}.modal-close,.workout-close{width:2.75rem;height:2.75rem}}
 /* Tarjetas clicables y favoritos */
 .catalog-page .card{cursor:pointer}
 .fav-toggle{position:absolute;top:.6rem;right:.6rem;z-index:2;width:2.4rem;height:2.4rem;border:0;border-radius:50%;background:rgba(255,255,255,.93);color:#b98a1a;font-size:1.3rem;line-height:1;cursor:pointer;box-shadow:0 2px 10px rgba(9,30,45,.22);transition:transform .15s,background .15s}
@@ -50,58 +53,56 @@ a,button,select,input,.exercise-link,.card{touch-action:manipulation;-webkit-tap
 .auto-toggle{display:flex;gap:.55rem;align-items:flex-start;margin:0 0 1rem;font-size:.82rem;color:#44596e;font-weight:600;cursor:pointer;line-height:1.45}
 .auto-toggle input{width:1.15rem;height:1.15rem;margin-top:.1rem;accent-color:var(--brand);flex:none}
 @media(max-width:620px){.fav-filter{height:48px;flex:1 1 auto}.fav-toggle{left:.5rem;right:auto;top:.5rem;width:2.2rem;height:2.2rem;font-size:1.15rem}.legend-inner{padding:.85rem}.legend-inner ul{font-size:.74rem}.legend-close{width:100%}}
-/* Modo oscuro */
-@media(prefers-color-scheme:dark){
-:root{color-scheme:dark;--ink:#e8eef5;--muted:#93a7bb;--line:#283c50;--surface:#14222f;--canvas:#0b141d;--shadow:0 16px 42px rgba(0,0,0,.55)}
-body:before{background:radial-gradient(circle at 6% 10%,rgba(199,243,107,.07),transparent 22rem),radial-gradient(circle at 92% 0,rgba(31,135,87,.08),transparent 28rem)}
-.filters{background:rgba(11,20,29,.88)!important;box-shadow:0 1px 0 rgba(255,255,255,.08)!important}
-.filter-field select,.search-wrap input{background:var(--surface)!important;border-color:var(--line)!important;color:var(--ink)}
-.search-wrap input::placeholder{color:var(--muted)}
-.reset-button:hover{background:#173226}
-.reset-button{color:#8fd9ae}
-.result-count{background:#12362a;border-color:#1e4a36;color:#8fd9ae}
-.card{border-color:rgba(255,255,255,.08)}
-.card img{background:#1a2b25;border-bottom-color:rgba(255,255,255,.06)}
-.card span{background:#12362a;color:#8fd9ae!important}
-.card p{color:#a7b8c9}
-.card:after{color:#8fd9ae}
-.fav-toggle{background:rgba(15,26,36,.9);color:#d9b355;box-shadow:0 2px 10px rgba(0,0,0,.45)}
-.fav-toggle.on{background:#4a3a10;color:#ffd76a}
-.fav-filter{background:var(--surface);color:var(--ink)}
-.fav-filter[aria-pressed="true"]{background:#43350f;border-color:#6b571d;color:#ffd76a}
-.no-results{background:var(--surface)}
-.legend-inner{background:var(--surface)}
-.legend-inner ul{color:#a7b8c9}
-.legend-close{background:#173226;color:#8fd9ae}
-.exercise-modal,.workout-modal{background:#101d29;color:var(--ink)}
-.modal-close,.workout-close{background:rgba(20,34,47,.94);color:var(--ink)}
-.modal-close:hover{background:#173226}
-.modal-kicker{color:#8fd9ae}
-.modal-description{color:#a7b8c9}
-.modal-facts dd{color:var(--ink)}
-.share-exercise{background:var(--surface);color:#8fd9ae}
-.share-exercise:hover{background:#173226}
-.plans-page .plan{background:var(--surface)!important;border-color:rgba(255,255,255,.08)}
-.plans-page .tag{background:#12362a!important;color:#8fd9ae!important}
-.plans-page section{background:#101d29;border-color:#1c2e40}
-.plans-page h3{color:#8fd9ae}
-.plans-page .exercise-link:hover,.plans-page .exercise-link:focus{background:#173226;color:#a5e3c1}
-.plan-progress{background:#12362a;color:#8fd9ae}
-.workout-eyebrow{color:#8fd9ae}
-.day-picker button{background:var(--surface);border-color:var(--line);color:var(--ink)}
-.day-picker button.done{background:#12281c;border-color:#245a3c}
-.day-picker strong{color:#8fd9ae}
-.auto-toggle{color:#a7b8c9}
-.workout-progress{background:#22364a}
-.workout-plan-name{color:#8fd9ae}
-.workout-type{color:#8fd9ae}
-.workout-time{color:#c7f36b}
-.workout-description{color:#a7b8c9}
-.workout-coach{background:#12362a;color:#9fd8b7}
-.workout-controls{background:var(--surface);border-top-color:var(--line)}
-.workout-controls button{background:#1d3040;color:var(--ink)}
-.workout-controls .workout-timer,.finish-workout{background:var(--brand-dark);color:#fff}
-.workout-controls .workout-next{background:var(--lime);color:#143929}
-.offline-banner{background:#e8eef5;color:#10233a}
-}
+/* Modo oscuro (automático según el sistema y con conmutador manual) */
+:root[data-theme="dark"]{color-scheme:dark;--ink:#e8eef5;--muted:#93a7bb;--line:#283c50;--surface:#14222f;--canvas:#0b141d;--shadow:0 16px 42px rgba(0,0,0,.55)}
+:root[data-theme="dark"] body:before{background:radial-gradient(circle at 6% 10%,rgba(199,243,107,.07),transparent 22rem),radial-gradient(circle at 92% 0,rgba(31,135,87,.08),transparent 28rem)}
+:root[data-theme="dark"] .filters{background:rgba(11,20,29,.88)!important;box-shadow:0 1px 0 rgba(255,255,255,.08)!important}
+:root[data-theme="dark"] .filter-field select,:root[data-theme="dark"] .search-wrap input{background:var(--surface)!important;border-color:var(--line)!important;color:var(--ink)}
+:root[data-theme="dark"] .search-wrap input::placeholder{color:var(--muted)}
+:root[data-theme="dark"] .reset-button:hover{background:#173226}
+:root[data-theme="dark"] .reset-button{color:#8fd9ae}
+:root[data-theme="dark"] .result-count{background:#12362a;border-color:#1e4a36;color:#8fd9ae}
+:root[data-theme="dark"] .card{border-color:rgba(255,255,255,.08)}
+:root[data-theme="dark"] .card img{background:#1a2b25;border-bottom-color:rgba(255,255,255,.06)}
+:root[data-theme="dark"] .card span{background:#12362a;color:#8fd9ae!important}
+:root[data-theme="dark"] .card p{color:#a7b8c9}
+:root[data-theme="dark"] .card:after{color:#8fd9ae}
+:root[data-theme="dark"] .fav-toggle{background:rgba(15,26,36,.9);color:#d9b355;box-shadow:0 2px 10px rgba(0,0,0,.45)}
+:root[data-theme="dark"] .fav-toggle.on{background:#4a3a10;color:#ffd76a}
+:root[data-theme="dark"] .fav-filter{background:var(--surface);color:var(--ink)}
+:root[data-theme="dark"] .fav-filter[aria-pressed="true"]{background:#43350f;border-color:#6b571d;color:#ffd76a}
+:root[data-theme="dark"] .no-results{background:var(--surface)}
+:root[data-theme="dark"] .legend-inner{background:var(--surface)}
+:root[data-theme="dark"] .legend-inner ul{color:#a7b8c9}
+:root[data-theme="dark"] .legend-close{background:#173226;color:#8fd9ae}
+:root[data-theme="dark"] .exercise-modal,:root[data-theme="dark"] .workout-modal{background:#101d29;color:var(--ink)}
+:root[data-theme="dark"] .modal-close,:root[data-theme="dark"] .workout-close{background:rgba(20,34,47,.94);color:var(--ink)}
+:root[data-theme="dark"] .modal-close:hover{background:#173226}
+:root[data-theme="dark"] .modal-kicker{color:#8fd9ae}
+:root[data-theme="dark"] .modal-description{color:#a7b8c9}
+:root[data-theme="dark"] .modal-facts dd{color:var(--ink)}
+:root[data-theme="dark"] .share-exercise{background:var(--surface);color:#8fd9ae}
+:root[data-theme="dark"] .share-exercise:hover{background:#173226}
+:root[data-theme="dark"] .plans-page .plan{background:var(--surface)!important;border-color:rgba(255,255,255,.08)}
+:root[data-theme="dark"] .plans-page .tag{background:#12362a!important;color:#8fd9ae!important}
+:root[data-theme="dark"] .plans-page section{background:#101d29;border-color:#1c2e40}
+:root[data-theme="dark"] .plans-page h3{color:#8fd9ae}
+:root[data-theme="dark"] .plans-page .exercise-link:hover,:root[data-theme="dark"] .plans-page .exercise-link:focus{background:#173226;color:#a5e3c1}
+:root[data-theme="dark"] .plan-progress{background:#12362a;color:#8fd9ae}
+:root[data-theme="dark"] .workout-eyebrow{color:#8fd9ae}
+:root[data-theme="dark"] .day-picker button{background:var(--surface);border-color:var(--line);color:var(--ink)}
+:root[data-theme="dark"] .day-picker button.done{background:#12281c;border-color:#245a3c}
+:root[data-theme="dark"] .day-picker strong{color:#8fd9ae}
+:root[data-theme="dark"] .auto-toggle{color:#a7b8c9}
+:root[data-theme="dark"] .workout-progress{background:#22364a}
+:root[data-theme="dark"] .workout-plan-name{color:#8fd9ae}
+:root[data-theme="dark"] .workout-type{color:#8fd9ae}
+:root[data-theme="dark"] .workout-time{color:#c7f36b}
+:root[data-theme="dark"] .workout-description{color:#a7b8c9}
+:root[data-theme="dark"] .workout-coach{background:#12362a;color:#9fd8b7}
+:root[data-theme="dark"] .workout-controls{background:var(--surface);border-top-color:var(--line)}
+:root[data-theme="dark"] .workout-controls button{background:#1d3040;color:var(--ink)}
+:root[data-theme="dark"] .workout-controls .workout-timer,:root[data-theme="dark"] .finish-workout{background:var(--brand-dark);color:#fff}
+:root[data-theme="dark"] .workout-controls .workout-next{background:var(--lime);color:#143929}
+:root[data-theme="dark"] .offline-banner{background:#e8eef5;color:#10233a}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
