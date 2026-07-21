@@ -42,6 +42,25 @@ NUEVOS = [
     dict(id='PAR-23', nombre='Transición y decisión', jugadores=2, objetivo='reacción', nivel='avanzado', duracion_min=10,
          material='6 conos, 1 balón', diagram='par23decide',
          instrucciones='A pasa y B decide según la puerta que se abra: devuelve de primeras o gira y sale por el lado contrario.'),
+    # Finalización avanzada.
+    dict(id='IND-24', nombre='Doble recorte y disparo', jugadores=1, objetivo='tiro', nivel='avanzado', duracion_min=12,
+         material='4 conos, balones, portería', diagram='ind24shot',
+         instrucciones='Conduce en velocidad, encadena dos recortes en los conos y finaliza con un disparo potente al palo largo.'),
+    dict(id='IND-25', nombre='Recorte desde banda y tiro', jugadores=1, objetivo='tiro', nivel='avanzado', duracion_min=12,
+         material='3 conos, balones, portería', diagram='ind25shot',
+         instrucciones='Ataca desde la banda, recorta hacia el centro dejando atrás el cono y finaliza con la pierna hábil al palo corto.'),
+    dict(id='IND-26', nombre='Vaselina tras conducción', jugadores=1, objetivo='tiro', nivel='avanzado', duracion_min=10,
+         material='3 conos, balones, portería', diagram='ind26chip',
+         instrucciones='Conduce en campo abierto, levanta la cabeza para leer al portero y finaliza con una vaselina ajustada.'),
+    dict(id='PAR-24', nombre='Pared y finalización de primeras', jugadores=2, objetivo='tiro', nivel='avanzado', duracion_min=14,
+         material='4 conos, balones, portería', diagram='par24finish',
+         instrucciones='A juega una pared con el apoyo de B, ataca el hueco y finaliza de primeras el pase de devolución.'),
+    dict(id='PAR-25', nombre='Centro raso y remate', jugadores=2, objetivo='tiro', nivel='avanzado', duracion_min=12,
+         material='4 conos, balones, portería', diagram='par25cross',
+         instrucciones='A conduce por banda y pone un centro raso al primer palo; B llega lanzado y remata de primeras.'),
+    dict(id='PAR-26', nombre='Dos contra portero', jugadores=2, objetivo='tiro', nivel='avanzado', duracion_min=14,
+         material='3 conos, balones, portería', diagram='par26twovone',
+         instrucciones='Ataque en superioridad: conducción, descarga al compañero en el momento justo y definición cruzada.'),
 ]
 
 

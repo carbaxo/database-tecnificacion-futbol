@@ -146,6 +146,24 @@ M.update({
 'PAR-23':dict(a=K([(.20,.55),(.20,.55)]),b=K([(.62,.55),(.62,.55),(.80,.30),(.62,.55),(.80,.80)],[0,.3,.55,.75,1]),ball=K([(.20,.55),(.62,.55),(.80,.30),(.62,.55),(.80,.80)],[0,.3,.55,.75,1]),fases=['A pasa','B lee la puerta','Devuelve o gira y sale']),
 })
 
+# Ejercicios de finalización avanzados.
+C.update({
+'IND-24':dict(a=[(.12,.80),(.28,.68),(.42,.54),(.52,.44),(.54,.40)],cones=[(.28,.66),(.42,.52),(.52,.42)],goal=True,ball=[(.14,.80),(.28,.68),(.42,.54),(.52,.44),(.82,.12)]),
+'IND-25':dict(a=[(.86,.80),(.68,.66),(.52,.54),(.46,.46),(.48,.42)],cones=[(.70,.66),(.54,.54)],goal=True,ball=[(.86,.80),(.68,.66),(.52,.54),(.46,.46),(.80,.12)]),
+'IND-26':dict(a=[(.10,.62),(.30,.56),(.50,.48),(.62,.42)],cones=[(.30,.56),(.48,.50)],goal=True,ball=[(.12,.62),(.30,.56),(.50,.48),(.80,.12)]),
+'PAR-24':dict(a=[(.12,.80),(.30,.62),(.46,.48),(.52,.42)],b=[(.40,.66),(.40,.66)],cones=[(.30,.62),(.48,.50)],goal=True,ball=[(.14,.80),(.40,.66),(.30,.58),(.82,.12)]),
+'PAR-25':dict(a=[(.16,.30),(.34,.26),(.52,.24)],b=[(.60,.74),(.58,.60),(.56,.52)],cones=[(.40,.26),(.58,.56)],goal=True,ball=[(.18,.30),(.52,.26),(.57,.54),(.82,.14)]),
+'PAR-26':dict(a=[(.14,.72),(.34,.60),(.48,.52)],b=[(.30,.42),(.48,.40),(.60,.44)],cones=[(.42,.52)],goal=True,ball=[(.16,.72),(.34,.60),(.50,.40),(.60,.44),(.82,.14)]),
+})
+M.update({
+'IND-24':dict(a=K([(.12,.80),(.28,.68),(.42,.54),(.52,.44),(.54,.40)],[0,.22,.44,.7,1]),ball=K([(.14,.80),(.28,.68),(.42,.54),(.52,.44),(.82,.12)],[0,.22,.44,.72,1]),fases=['Conducción en velocidad','Doble recorte','Disparo potente']),
+'IND-25':dict(a=K([(.86,.80),(.68,.66),(.52,.54),(.46,.46),(.48,.42)],[0,.22,.46,.72,1]),ball=K([(.86,.80),(.68,.66),(.52,.54),(.46,.46),(.80,.12)],[0,.22,.46,.74,1]),fases=['Ataca desde la banda','Recorte al centro','Tiro con la pierna hábil']),
+'IND-26':dict(a=K([(.10,.62),(.30,.56),(.50,.48),(.62,.42)],[0,.3,.62,1]),ball=K([(.12,.62),(.30,.56),(.50,.48),(.80,.12)],[0,.3,.62,1]),fases=['Conducción larga','Levanta la cabeza','Vaselina al portero']),
+'PAR-24':dict(a=K([(.12,.80),(.12,.80),(.30,.62),(.46,.48),(.52,.42)],[0,.2,.5,.78,1]),b=K([(.40,.66),(.40,.66)]),ball=K([(.14,.80),(.40,.66),(.30,.58),(.46,.48),(.82,.12)],[0,.22,.46,.74,1]),fases=['Pared con el apoyo','Desmarque al hueco','Finaliza de primeras']),
+'PAR-25':dict(a=K([(.16,.30),(.34,.28),(.52,.26),(.52,.26)],[0,.4,.7,1]),b=K([(.60,.74),(.60,.62),(.57,.53),(.57,.53)],[0,.4,.7,1]),ball=K([(.18,.30),(.52,.26),(.57,.54),(.82,.14)],[0,.42,.68,1]),fases=['Conducción por banda','Centro raso','Remate de primeras']),
+'PAR-26':dict(a=K([(.14,.72),(.14,.72),(.34,.60),(.48,.52)],[0,.2,.55,1]),b=K([(.30,.42),(.44,.40),(.58,.44),(.62,.46)],[0,.35,.7,1]),ball=K([(.16,.72),(.34,.60),(.50,.40),(.60,.44),(.82,.14)],[0,.3,.55,.78,1]),fases=['Ataque 2 contra portero','Descarga al compañero','Definición cruzada']),
+})
+
 def xy(p):
     x0,y0,x1,y1=FIELD
     return (x0+p[0]*(x1-x0), y0+p[1]*(y1-y0))
@@ -309,7 +327,7 @@ def render_frames(ex):
         idx=min(len(anim['fases'])-1,int(move*len(anim['fases'])))
         phase=anim['fases'][idx].upper()
         passing=any(w in phase for w in ('PASE','DEVOLUCIÓN','PARED','ENVÍA','ASISTENCIA','DESCARGA'))
-        color='#e6a800' if passing else ('#d9485f' if 'TIRO' in phase or 'FINALIZA' in phase else '#1778d4')
+        color='#e6a800' if passing else ('#d9485f' if any(w in phase for w in ('TIRO','FINALIZA','DISPARO','REMATE','DEFINICIÓN','VASELINA')) else '#1778d4')
         d.rounded_rectangle((43,77,43+d.textbbox((0,0),phase,font=SMALL)[2]+22,101),12,fill=color)
         d.text((54,89),phase,font=SMALL,anchor='lm',fill='white')
         d.rounded_rectangle((45,407,595,411),2,fill='#dbe4ec')

@@ -32,7 +32,7 @@ SOLO-INICIACIÓN-60,Individual · iniciación · 60 min,1,iniciación,60,3,Sesi�
 SOLO-INICIACIÓN-60,Individual · iniciación · 60 min,1,iniciación,60,3,Sesión completa C · trabaja todas las áreas,7,ejercicio,IND-18,Doble finta corporal,5,Doble finta corporal
 SOLO-INICIACIÓN-60,Individual · iniciación · 60 min,1,iniciación,60,3,Sesión completa C · trabaja todas las áreas,8,ejercicio,IND-11,Protección y giro,5,Protección y giro
 SOLO-INICIACIÓN-60,Individual · iniciación · 60 min,1,iniciación,60,3,Sesión completa C · trabaja todas las áreas,9,ejercicio,IND-15,Caza de puertas,5,Caza de puertas
-SOLO-INICIACIÓN-60,Individual · iniciación · 60 min,1,iniciación,60,3,Sesión completa C · trabaja todas las áreas,10,ejercicio,IND-08,Finalización tras recorte,5,Finalización tras recorte
+SOLO-INICIACIÓN-60,Individual · iniciación · 60 min,1,iniciación,60,3,Sesión completa C · trabaja todas las áreas,10,ejercicio,IND-24,Doble recorte y disparo,5,Doble recorte y disparo
 SOLO-INICIACIÓN-60,Individual · iniciación · 60 min,1,iniciación,60,3,Sesión completa C · trabaja todas las áreas,11,ejercicio,IND-12,Circuito técnico completo,5,Circuito técnico completo
 SOLO-INICIACIÓN-60,Individual · iniciación · 60 min,1,iniciación,60,3,Sesión completa C · trabaja todas las áreas,12,vuelta_calma,,,5,"Toques suaves, estiramientos y respiración."
 SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,1,Sesión completa A · trabaja todas las áreas,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón, con ambos perfiles."
@@ -68,7 +68,7 @@ SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,3,Sesión 
 SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,3,Sesión completa C · trabaja todas las áreas,7,ejercicio,IND-18,Doble finta corporal,5,Doble finta corporal
 SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,3,Sesión completa C · trabaja todas las áreas,8,ejercicio,IND-11,Protección y giro,5,Protección y giro
 SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,3,Sesión completa C · trabaja todas las áreas,9,ejercicio,IND-15,Caza de puertas,5,Caza de puertas
-SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,3,Sesión completa C · trabaja todas las áreas,10,ejercicio,IND-08,Finalización tras recorte,5,Finalización tras recorte
+SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,3,Sesión completa C · trabaja todas las áreas,10,ejercicio,IND-24,Doble recorte y disparo,5,Doble recorte y disparo
 SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,3,Sesión completa C · trabaja todas las áreas,11,ejercicio,IND-12,Circuito técnico completo,5,Circuito técnico completo
 SOLO-INTERMEDIO-60,Individual · intermedio · 60 min,1,intermedio,60,3,Sesión completa C · trabaja todas las áreas,12,vuelta_calma,,,5,"Toques suaves, estiramientos y respiración."
 SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,1,Sesión completa A · trabaja todas las áreas,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón, con ambos perfiles."
@@ -92,7 +92,7 @@ SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,2,Sesión comple
 SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,2,Sesión completa B · trabaja todas las áreas,7,ejercicio,IND-18,Doble finta corporal,5,Doble finta corporal
 SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,2,Sesión completa B · trabaja todas las áreas,8,ejercicio,IND-11,Protección y giro,5,Protección y giro
 SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,2,Sesión completa B · trabaja todas las áreas,9,ejercicio,IND-15,Caza de puertas,5,Caza de puertas
-SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,2,Sesión completa B · trabaja todas las áreas,10,ejercicio,IND-08,Finalización tras recorte,5,Finalización tras recorte
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,2,Sesión completa B · trabaja todas las áreas,10,ejercicio,IND-24,Doble recorte y disparo,5,Doble recorte y disparo
 SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,2,Sesión completa B · trabaja todas las áreas,11,ejercicio,IND-12,Circuito técnico completo,5,Circuito técnico completo
 SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,2,Sesión completa B · trabaja todas las áreas,12,vuelta_calma,,,5,"Toques suaves, estiramientos y respiración."
 SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,3,Sesión completa C · trabaja todas las áreas,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón, con ambos perfiles."
@@ -104,7 +104,7 @@ SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,3,Sesión comple
 SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,3,Sesión completa C · trabaja todas las áreas,7,ejercicio,IND-21,Regate en zigzag agresivo,5,Regate en zigzag agresivo
 SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,3,Sesión completa C · trabaja todas las áreas,8,ejercicio,IND-22,Protección 360° y salida,5,Protección 360° y salida
 SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,3,Sesión completa C · trabaja todas las áreas,9,ejercicio,IND-23,Decisión por colores,5,Decisión por colores
-SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,3,Sesión completa C · trabaja todas las áreas,10,ejercicio,IND-20,Finalización con ambos pies,5,Finalización con ambos pies
+SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,3,Sesión completa C · trabaja todas las áreas,10,ejercicio,IND-25,Recorte desde banda y tiro,5,Recorte desde banda y tiro
 SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,3,Sesión completa C · trabaja todas las áreas,11,ejercicio,IND-12,Circuito técnico completo,5,Circuito técnico completo
 SOLO-AVANZADO-60,Individual · avanzado · 60 min,1,avanzado,60,3,Sesión completa C · trabaja todas las áreas,12,vuelta_calma,,,5,"Toques suaves, estiramientos y respiración."
 PAREJA-INICIACIÓN-60,Pareja · iniciación · 60 min,2,iniciación,60,1,Sesión completa A · trabaja todas las áreas,1,calentamiento,,,5,"Movilidad, activación y contactos libres con balón, con ambos perfiles."
@@ -139,7 +139,7 @@ PAREJA-INICIACIÓN-60,Pareja · iniciación · 60 min,2,iniciación,60,3,Sesión
 PAREJA-INICIACIÓN-60,Pareja · iniciación · 60 min,2,iniciación,60,3,Sesión completa C · trabaja todas las áreas,6,ejercicio,PAR-07,Rondo 1 contra 1 con apoyo,5,Rondo 1 contra 1 con apoyo
 PAREJA-INICIACIÓN-60,Pareja · iniciación · 60 min,2,iniciación,60,3,Sesión completa C · trabaja todas las áreas,7,ejercicio,PAR-18,Pase al espacio,5,Pase al espacio
 PAREJA-INICIACIÓN-60,Pareja · iniciación · 60 min,2,iniciación,60,3,Sesión completa C · trabaja todas las áreas,8,ejercicio,PAR-10,Reacción por dos puertas,5,Reacción por dos puertas
-PAREJA-INICIACIÓN-60,Pareja · iniciación · 60 min,2,iniciación,60,3,Sesión completa C · trabaja todas las áreas,9,ejercicio,PAR-09,Finalización con asistencia,5,Finalización con asistencia
+PAREJA-INICIACIÓN-60,Pareja · iniciación · 60 min,2,iniciación,60,3,Sesión completa C · trabaja todas las áreas,9,ejercicio,PAR-24,Pared y finalización de primeras,5,Pared y finalización de primeras
 PAREJA-INICIACIÓN-60,Pareja · iniciación · 60 min,2,iniciación,60,3,Sesión completa C · trabaja todas las áreas,10,ejercicio,PAR-12,Combinación y tiro,5,Combinación y tiro
 PAREJA-INICIACIÓN-60,Pareja · iniciación · 60 min,2,iniciación,60,3,Sesión completa C · trabaja todas las áreas,11,ejercicio,PAR-21,Conducción en espejo con cambios,5,Conducción en espejo con cambios
 PAREJA-INICIACIÓN-60,Pareja · iniciación · 60 min,2,iniciación,60,3,Sesión completa C · trabaja todas las áreas,12,vuelta_calma,,,5,"Toques suaves, estiramientos y respiración."
@@ -175,7 +175,7 @@ PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,3,Sesión co
 PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,3,Sesión completa C · trabaja todas las áreas,6,ejercicio,PAR-07,Rondo 1 contra 1 con apoyo,5,Rondo 1 contra 1 con apoyo
 PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,3,Sesión completa C · trabaja todas las áreas,7,ejercicio,PAR-18,Pase al espacio,5,Pase al espacio
 PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,3,Sesión completa C · trabaja todas las áreas,8,ejercicio,PAR-10,Reacción por dos puertas,5,Reacción por dos puertas
-PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,3,Sesión completa C · trabaja todas las áreas,9,ejercicio,PAR-09,Finalización con asistencia,5,Finalización con asistencia
+PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,3,Sesión completa C · trabaja todas las áreas,9,ejercicio,PAR-24,Pared y finalización de primeras,5,Pared y finalización de primeras
 PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,3,Sesión completa C · trabaja todas las áreas,10,ejercicio,PAR-12,Combinación y tiro,5,Combinación y tiro
 PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,3,Sesión completa C · trabaja todas las áreas,11,ejercicio,PAR-21,Conducción en espejo con cambios,5,Conducción en espejo con cambios
 PAREJA-INTERMEDIO-60,Pareja · intermedio · 60 min,2,intermedio,60,3,Sesión completa C · trabaja todas las áreas,12,vuelta_calma,,,5,"Toques suaves, estiramientos y respiración."
@@ -199,7 +199,7 @@ PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,2,Sesión completa
 PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,2,Sesión completa B · trabaja todas las áreas,6,ejercicio,PAR-16,Protección con oposición,5,Protección con oposición
 PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,2,Sesión completa B · trabaja todas las áreas,7,ejercicio,PAR-18,Pase al espacio,5,Pase al espacio
 PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,2,Sesión completa B · trabaja todas las áreas,8,ejercicio,PAR-23,Transición y decisión,5,Transición y decisión
-PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,2,Sesión completa B · trabaja todas las áreas,9,ejercicio,PAR-09,Finalización con asistencia,5,Finalización con asistencia
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,2,Sesión completa B · trabaja todas las áreas,9,ejercicio,PAR-24,Pared y finalización de primeras,5,Pared y finalización de primeras
 PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,2,Sesión completa B · trabaja todas las áreas,10,ejercicio,PAR-12,Combinación y tiro,5,Combinación y tiro
 PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,2,Sesión completa B · trabaja todas las áreas,11,ejercicio,PAR-21,Conducción en espejo con cambios,5,Conducción en espejo con cambios
 PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,2,Sesión completa B · trabaja todas las áreas,12,vuelta_calma,,,5,"Toques suaves, estiramientos y respiración."
@@ -211,7 +211,7 @@ PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,3,Sesión completa
 PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,3,Sesión completa C · trabaja todas las áreas,6,ejercicio,PAR-07,Rondo 1 contra 1 con apoyo,5,Rondo 1 contra 1 con apoyo
 PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,3,Sesión completa C · trabaja todas las áreas,7,ejercicio,PAR-22,"Ruptura, apoyo y descarga",5,"Ruptura, apoyo y descarga"
 PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,3,Sesión completa C · trabaja todas las áreas,8,ejercicio,PAR-10,Reacción por dos puertas,5,Reacción por dos puertas
-PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,3,Sesión completa C · trabaja todas las áreas,9,ejercicio,PAR-19,"Pared, cruce y finalización",5,"Pared, cruce y finalización"
+PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,3,Sesión completa C · trabaja todas las áreas,9,ejercicio,PAR-25,Centro raso y remate,5,Centro raso y remate
 PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,3,Sesión completa C · trabaja todas las áreas,10,ejercicio,PAR-12,Combinación y tiro,5,Combinación y tiro
 PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,3,Sesión completa C · trabaja todas las áreas,11,ejercicio,PAR-05,Espejo con balón,5,Espejo con balón
 PAREJA-AVANZADO-60,Pareja · avanzado · 60 min,2,avanzado,60,3,Sesión completa C · trabaja todas las áreas,12,vuelta_calma,,,5,"Toques suaves, estiramientos y respiración."

@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "idioma": "es",
-  "total": 46,
+  "total": 52,
   "licencia": "Uso personal y educativo",
   "campos": [
     "id",
@@ -841,6 +841,114 @@
         "A pasa",
         "B lee la puerta",
         "Devuelve o gira y sale"
+      ]
+    },
+    {
+      "id": "IND-24",
+      "nombre": "Doble recorte y disparo",
+      "jugadores": 1,
+      "objetivo": "tiro",
+      "nivel": "avanzado",
+      "duracion_min": 12,
+      "material": "4 conos, balones, portería",
+      "instrucciones": "Conduce en velocidad, encadena dos recortes en los conos y finaliza con un disparo potente al palo largo.",
+      "diagram": "ind24shot",
+      "archivo_svg": "svg/ind-24-doble-recorte-y-disparo.svg",
+      "archivo_gif": "gif/ind-24-doble-recorte-y-disparo.gif",
+      "secuencia_animacion": [
+        "Conducción en velocidad",
+        "Doble recorte",
+        "Disparo potente"
+      ]
+    },
+    {
+      "id": "IND-25",
+      "nombre": "Recorte desde banda y tiro",
+      "jugadores": 1,
+      "objetivo": "tiro",
+      "nivel": "avanzado",
+      "duracion_min": 12,
+      "material": "3 conos, balones, portería",
+      "instrucciones": "Ataca desde la banda, recorta hacia el centro dejando atrás el cono y finaliza con la pierna hábil al palo corto.",
+      "diagram": "ind25shot",
+      "archivo_svg": "svg/ind-25-recorte-desde-banda-y-tiro.svg",
+      "archivo_gif": "gif/ind-25-recorte-desde-banda-y-tiro.gif",
+      "secuencia_animacion": [
+        "Ataca desde la banda",
+        "Recorte al centro",
+        "Tiro con la pierna hábil"
+      ]
+    },
+    {
+      "id": "IND-26",
+      "nombre": "Vaselina tras conducción",
+      "jugadores": 1,
+      "objetivo": "tiro",
+      "nivel": "avanzado",
+      "duracion_min": 10,
+      "material": "3 conos, balones, portería",
+      "instrucciones": "Conduce en campo abierto, levanta la cabeza para leer al portero y finaliza con una vaselina ajustada.",
+      "diagram": "ind26chip",
+      "archivo_svg": "svg/ind-26-vaselina-tras-conduccion.svg",
+      "archivo_gif": "gif/ind-26-vaselina-tras-conduccion.gif",
+      "secuencia_animacion": [
+        "Conducción larga",
+        "Levanta la cabeza",
+        "Vaselina al portero"
+      ]
+    },
+    {
+      "id": "PAR-24",
+      "nombre": "Pared y finalización de primeras",
+      "jugadores": 2,
+      "objetivo": "tiro",
+      "nivel": "avanzado",
+      "duracion_min": 14,
+      "material": "4 conos, balones, portería",
+      "instrucciones": "A juega una pared con el apoyo de B, ataca el hueco y finaliza de primeras el pase de devolución.",
+      "diagram": "par24finish",
+      "archivo_svg": "svg/par-24-pared-y-finalizacion-de-primeras.svg",
+      "archivo_gif": "gif/par-24-pared-y-finalizacion-de-primeras.gif",
+      "secuencia_animacion": [
+        "Pared con el apoyo",
+        "Desmarque al hueco",
+        "Finaliza de primeras"
+      ]
+    },
+    {
+      "id": "PAR-25",
+      "nombre": "Centro raso y remate",
+      "jugadores": 2,
+      "objetivo": "tiro",
+      "nivel": "avanzado",
+      "duracion_min": 12,
+      "material": "4 conos, balones, portería",
+      "instrucciones": "A conduce por banda y pone un centro raso al primer palo; B llega lanzado y remata de primeras.",
+      "diagram": "par25cross",
+      "archivo_svg": "svg/par-25-centro-raso-y-remate.svg",
+      "archivo_gif": "gif/par-25-centro-raso-y-remate.gif",
+      "secuencia_animacion": [
+        "Conducción por banda",
+        "Centro raso",
+        "Remate de primeras"
+      ]
+    },
+    {
+      "id": "PAR-26",
+      "nombre": "Dos contra portero",
+      "jugadores": 2,
+      "objetivo": "tiro",
+      "nivel": "avanzado",
+      "duracion_min": 14,
+      "material": "3 conos, balones, portería",
+      "instrucciones": "Ataque en superioridad: conducción, descarga al compañero en el momento justo y definición cruzada.",
+      "diagram": "par26twovone",
+      "archivo_svg": "svg/par-26-dos-contra-portero.svg",
+      "archivo_gif": "gif/par-26-dos-contra-portero.gif",
+      "secuencia_animacion": [
+        "Ataque 2 contra portero",
+        "Descarga al compañero",
+        "Definición cruzada"
       ]
     }
   ]

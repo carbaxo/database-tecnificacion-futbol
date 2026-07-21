@@ -19,7 +19,7 @@
   const ctaHref = isPlans ? '#planes' : 'planes.html';
   const stats = isPlans
     ? [['6', 'planes guiados'], ['3', 'días por semana'], ['4', 'semanas de progreso'], ['60', 'minutos por sesión']]
-    : [['46', 'ejercicios animados'], ['23', 'individuales'], ['23', 'por parejas'], ['3', 'niveles de juego']];
+    : [['52', 'ejercicios animados'], ['26', 'individuales'], ['26', 'por parejas'], ['3', 'niveles de juego']];
   header.innerHTML = `<nav class="site-nav" aria-label="Navegación principal"><a class="brand" href="index.html"><span class="brand-mark">⚽</span>Fútbol técnico</a><div class="nav-actions"><a class="nav-link" href="${isPlans ? 'index.html' : 'planes.html'}">${isPlans ? '← Ejercicios' : 'Planes semanales →'}</a></div></nav><div class="hero"><div><div class="eyebrow">Tecnificación de fútbol</div><h1>${title}</h1><p class="hero-copy">${description}</p><a class="hero-action" href="${ctaHref}">${cta}</a></div><div class="hero-stats">${stats.map(([value,label]) => `<div class="hero-stat"><strong>${value}</strong><span>${label}</span></div>`).join('')}</div></div>`;
 
   if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});

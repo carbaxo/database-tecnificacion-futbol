@@ -1,6 +1,6 @@
 # Biblioteca de tecnificación de fútbol
 
-46 ejercicios: 23 individuales y 23 por parejas (incluye 6 ejercicios avanzados).
+52 ejercicios: 26 individuales y 26 por parejas (incluye 12 ejercicios avanzados, 6 de ellos de finalización).
 
 ## Contenido
 

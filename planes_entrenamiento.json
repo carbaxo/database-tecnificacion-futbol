@@ -237,9 +237,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "IND-08",
+              "ejercicio_id": "IND-24",
               "minutos": 5,
-              "descripcion": "Finalización tras recorte"
+              "descripcion": "Doble recorte y disparo"
             },
             {
               "tipo": "ejercicio",
@@ -485,9 +485,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "IND-08",
+              "ejercicio_id": "IND-24",
               "minutos": 5,
-              "descripcion": "Finalización tras recorte"
+              "descripcion": "Doble recorte y disparo"
             },
             {
               "tipo": "ejercicio",
@@ -656,9 +656,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "IND-08",
+              "ejercicio_id": "IND-24",
               "minutos": 5,
-              "descripcion": "Finalización tras recorte"
+              "descripcion": "Doble recorte y disparo"
             },
             {
               "tipo": "ejercicio",
@@ -733,9 +733,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "IND-20",
+              "ejercicio_id": "IND-25",
               "minutos": 5,
-              "descripcion": "Finalización con ambos pies"
+              "descripcion": "Recorte desde banda y tiro"
             },
             {
               "tipo": "ejercicio",
@@ -975,9 +975,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-09",
+              "ejercicio_id": "PAR-24",
               "minutos": 5,
-              "descripcion": "Finalización con asistencia"
+              "descripcion": "Pared y finalización de primeras"
             },
             {
               "tipo": "ejercicio",
@@ -1223,9 +1223,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-09",
+              "ejercicio_id": "PAR-24",
               "minutos": 5,
-              "descripcion": "Finalización con asistencia"
+              "descripcion": "Pared y finalización de primeras"
             },
             {
               "tipo": "ejercicio",
@@ -1394,9 +1394,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-09",
+              "ejercicio_id": "PAR-24",
               "minutos": 5,
-              "descripcion": "Finalización con asistencia"
+              "descripcion": "Pared y finalización de primeras"
             },
             {
               "tipo": "ejercicio",
@@ -1471,9 +1471,9 @@
             },
             {
               "tipo": "ejercicio",
-              "ejercicio_id": "PAR-19",
+              "ejercicio_id": "PAR-25",
               "minutos": 5,
-              "descripcion": "Pared, cruce y finalización"
+              "descripcion": "Centro raso y remate"
             },
             {
               "tipo": "ejercicio",

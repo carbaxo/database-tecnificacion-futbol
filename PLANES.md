@@ -47,7 +47,7 @@
 - 5 min — **IND-18**: Doble finta corporal
 - 5 min — **IND-11**: Protección y giro
 - 5 min — **IND-15**: Caza de puertas
-- 5 min — **IND-08**: Finalización tras recorte
+- 5 min — **IND-24**: Doble recorte y disparo
 - 5 min — **IND-12**: Circuito técnico completo
 - 5 min: Toques suaves, estiramientos y respiración.
 
@@ -98,7 +98,7 @@
 - 5 min — **IND-18**: Doble finta corporal
 - 5 min — **IND-11**: Protección y giro
 - 5 min — **IND-15**: Caza de puertas
-- 5 min — **IND-08**: Finalización tras recorte
+- 5 min — **IND-24**: Doble recorte y disparo
 - 5 min — **IND-12**: Circuito técnico completo
 - 5 min: Toques suaves, estiramientos y respiración.
 
@@ -134,7 +134,7 @@
 - 5 min — **IND-18**: Doble finta corporal
 - 5 min — **IND-11**: Protección y giro
 - 5 min — **IND-15**: Caza de puertas
-- 5 min — **IND-08**: Finalización tras recorte
+- 5 min — **IND-24**: Doble recorte y disparo
 - 5 min — **IND-12**: Circuito técnico completo
 - 5 min: Toques suaves, estiramientos y respiración.
 
@@ -149,7 +149,7 @@
 - 5 min — **IND-21**: Regate en zigzag agresivo
 - 5 min — **IND-22**: Protección 360° y salida
 - 5 min — **IND-23**: Decisión por colores
-- 5 min — **IND-20**: Finalización con ambos pies
+- 5 min — **IND-25**: Recorte desde banda y tiro
 - 5 min — **IND-12**: Circuito técnico completo
 - 5 min: Toques suaves, estiramientos y respiración.
 
@@ -199,7 +199,7 @@
 - 5 min — **PAR-07**: Rondo 1 contra 1 con apoyo
 - 5 min — **PAR-18**: Pase al espacio
 - 5 min — **PAR-10**: Reacción por dos puertas
-- 5 min — **PAR-09**: Finalización con asistencia
+- 5 min — **PAR-24**: Pared y finalización de primeras
 - 5 min — **PAR-12**: Combinación y tiro
 - 5 min — **PAR-21**: Conducción en espejo con cambios
 - 5 min: Toques suaves, estiramientos y respiración.
@@ -250,7 +250,7 @@
 - 5 min — **PAR-07**: Rondo 1 contra 1 con apoyo
 - 5 min — **PAR-18**: Pase al espacio
 - 5 min — **PAR-10**: Reacción por dos puertas
-- 5 min — **PAR-09**: Finalización con asistencia
+- 5 min — **PAR-24**: Pared y finalización de primeras
 - 5 min — **PAR-12**: Combinación y tiro
 - 5 min — **PAR-21**: Conducción en espejo con cambios
 - 5 min: Toques suaves, estiramientos y respiración.
@@ -286,7 +286,7 @@
 - 5 min — **PAR-16**: Protección con oposición
 - 5 min — **PAR-18**: Pase al espacio
 - 5 min — **PAR-23**: Transición y decisión
-- 5 min — **PAR-09**: Finalización con asistencia
+- 5 min — **PAR-24**: Pared y finalización de primeras
 - 5 min — **PAR-12**: Combinación y tiro
 - 5 min — **PAR-21**: Conducción en espejo con cambios
 - 5 min: Toques suaves, estiramientos y respiración.
@@ -301,7 +301,7 @@
 - 5 min — **PAR-07**: Rondo 1 contra 1 con apoyo
 - 5 min — **PAR-22**: Ruptura, apoyo y descarga
 - 5 min — **PAR-10**: Reacción por dos puertas
-- 5 min — **PAR-19**: Pared, cruce y finalización
+- 5 min — **PAR-25**: Centro raso y remate
 - 5 min — **PAR-12**: Combinación y tiro
 - 5 min — **PAR-05**: Espejo con balón
 - 5 min: Toques suaves, estiramientos y respiración.
