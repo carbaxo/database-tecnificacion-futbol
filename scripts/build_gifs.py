@@ -245,41 +245,66 @@ def arrowhead(draw,route,color):
     pts=[q,(q[0]-15*math.cos(a-.45),q[1]-15*math.sin(a-.45)),(q[0]-15*math.cos(a+.45),q[1]-15*math.sin(a+.45))]
     draw.polygon(pts,fill=color)
 
+def pitch_markings(d,cfg):
+    # Líneas reales de campo, estilo pizarra táctica.
+    x0,y0,x1,y1=FIELD
+    lx0,ly0,lx1,ly1=x0+9,y0+9,x1-9,y1-9
+    line='#eaf6ef'
+    d.rounded_rectangle((lx0,ly0,lx1,ly1),8,outline=line,width=3)
+    r=14
+    d.arc((lx0-r,ly0-r,lx0+r,ly0+r),0,90,fill=line,width=2)
+    d.arc((lx1-r,ly0-r,lx1+r,ly0+r),90,180,fill=line,width=2)
+    d.arc((lx0-r,ly1-r,lx0+r,ly1+r),270,360,fill=line,width=2)
+    d.arc((lx1-r,ly1-r,lx1+r,ly1+r),180,270,fill=line,width=2)
+    if cfg.get('goal'):
+        gx=498; top=ly0
+        d.rectangle((gx-118,top,min(gx+104,lx1),top+90),outline=line,width=2)   # área grande
+        d.rectangle((gx-52,top,gx+52,top+34),outline=line,width=2)              # área pequeña
+        d.ellipse((gx-2,top+58-2,gx+2,top+58+2),fill=line)                      # punto de penalti
+        d.arc((gx-34,top+58-34,gx+34,top+58+34),22,158,fill=line,width=2)       # arco
+        gw=48                                                                    # portería con red
+        d.rectangle((gx-gw,top-17,gx+gw,top),fill='#f1f6f9',outline=line,width=2)
+        for xx in range(int(gx-gw)+7,int(gx+gw),9): d.line((xx,top-16,xx,top-1),fill='#bcccd6',width=1)
+        for yy in range(int(top)-13,int(top),5): d.line((gx-gw+1,yy,gx+gw-1,yy),fill='#bcccd6',width=1)
+        d.line((gx-gw,top-17,gx-gw,top),fill=line,width=3)
+        d.line((gx+gw,top-17,gx+gw,top),fill=line,width=3)
+
 def base(ex,cfg):
     im=Image.new('RGB',(W,H),'#eef3f6'); d=ImageDraw.Draw(im)
     d.text((28,14),f"{ex['id']} · {ex['nombre']}",font=BOLD,fill='#102a43')
     badge=ex['objetivo'].upper(); bw=d.textbbox((0,0),badge,font=SMALL)[2]+24
     d.rounded_rectangle((W-bw-28,15,W-28,39),12,fill='#dceeff')
     d.text((W-bw/2-28,27),badge,font=SMALL,anchor='mm',fill='#145da0')
-    x0,y0,x1,y1=FIELD; d.rounded_rectangle(FIELD,10,fill='#168447',outline='#0f5933',width=4)
-    for i in range(8):
-        xx=x0+i*(x1-x0)/8; d.rectangle((xx,y0,xx+(x1-x0)/16,y1),fill='#197a43')
-    d.rectangle((x0+14,y0+14,x1-14,y1-14),outline=(255,255,255),width=2)
+    # Césped con corte en franjas, recortado a un rectángulo redondeado.
+    x0,y0,x1,y1=FIELD
+    field=Image.new('RGB',(W,H),'#1b8049'); fd=ImageDraw.Draw(field)
+    sw=(x1-x0)/11
+    for i in range(11):
+        if i%2==0: fd.rectangle((x0+i*sw,y0,x0+(i+1)*sw,y1),fill='#1e8b4f')
+    mask=Image.new('L',(W,H),0); ImageDraw.Draw(mask).rounded_rectangle(FIELD,14,fill=255)
+    im.paste(field,(0,0),mask); d=ImageDraw.Draw(im)
+    pitch_markings(d,cfg)
     colors=['#ef4444','#3b82f6','#facc15','#22c55e'] if cfg.get('colors') else []
     for i,p in enumerate(cfg.get('cones',[])): cone(d,p,colors[i%4] if colors else '#ff7a00')
-    if cfg.get('wall'): d.rounded_rectangle((548,190,597,202),3,fill='#cbd5e1',outline='#475569',width=2)
+    if cfg.get('wall'): d.rounded_rectangle((548,190,597,202),3,fill='#e2e8f0',outline='#475569',width=2)
     if cfg.get('wall_long'):
-        d.rounded_rectangle((135,108,505,120),3,fill='#cbd5e1',outline='#475569',width=2)
+        d.rounded_rectangle((135,108,505,120),3,fill='#e2e8f0',outline='#475569',width=2)
         for xx in range(150,500,28): d.line((xx,109,xx,119),fill='#64748b',width=1)
-    if cfg.get('goal'):
-        d.line((460,70,575,70,575,105),fill='white',width=4); d.line((460,70,460,105),fill='white',width=4)
-        for xx in range(470,575,18): d.line((xx,70,xx,103),fill='#dbeafe',width=1)
-        for yy in range(80,105,10): d.line((460,yy,575,yy),fill='#dbeafe',width=1)
     if cfg.get('ladder'):
-        for i in range(7): d.rectangle((150+i*55,175,205+i*55,245),outline='white',width=3)
-    # Rutas: blanco = conducción/desplazamiento, amarillo = balón/pase.
-    for key,col in [('a','#ffffff'),('b','#b9ddff')]:
+        for i in range(7): d.rectangle((150+i*55,175,205+i*55,245),outline='#eaf6ef',width=2)
+    # Rutas: blanco = carrera/conducción, amarillo discontinuo = pase/balón.
+    for key,col in [('a','#ffffff'),('b','#8fd0ff')]:
         if key in cfg:
             pts=[xy(p) for p in cfg[key]]
             if len(pts)>1:
-                d.line(pts,fill='#0b5335',width=7)
-                d.line(pts,fill=col,width=3)
+                d.line(pts,fill='#0b5335',width=8,joint='curve')
+                d.line(pts,fill=col,width=4,joint='curve')
                 arrowhead(d,cfg[key],col)
     if 'ball' in cfg:
         pts=[xy(p) for p in cfg['ball']]
         dashed(d,pts,'#ffd43b',3)
         arrowhead(d,cfg['ball'],'#ffd43b')
-    # Inicio y final del recorrido principal.
+    # Inicio (punto verde) y final (banderín) del recorrido principal.
     sx,sy=xy(cfg['a'][0]); exx,eyy=xy(cfg['a'][-1])
     d.ellipse((sx-6,sy-6,sx+6,sy+6),fill='#22c55e',outline='white',width=2)
     if math.hypot(exx-sx,eyy-sy)>12:
@@ -288,7 +313,7 @@ def base(ex,cfg):
     d.rounded_rectangle((30,360,610,414),10,fill='white',outline='#d8e0e8')
     text=ex['instrucciones']; text=text if len(text)<88 else text[:85]+'…'
     d.text((45,373),text,font=SMALL,fill='#334e68')
-    d.text((45,393),'Blanco: jugador/conducción   ·   Amarillo: pase o recorrido del balón',font=SMALL,fill='#486581')
+    d.text((45,393),'Blanco: carrera/conducción   ·   Amarillo discontinuo: pase o balón',font=SMALL,fill='#486581')
     return im
 
 def render_frames(ex):
