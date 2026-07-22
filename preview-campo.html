@@ -1,0 +1,47 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1326">
+<title>Prueba · diagrama del campo</title>
+<style>
+:root{--bg:#0b1326;--surface:#151d31;--line:#2a3350;--text:#e7ecfb;--muted:#9fb0c9;--primary:#4edea3}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Kanit',system-ui,sans-serif;line-height:1.5;padding:0 0 3rem}
+header{padding:2rem 1.2rem 1rem;max-width:900px;margin:auto}
+.eyebrow{color:var(--primary);font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;font-weight:700}
+h1{font-size:clamp(1.8rem,6vw,2.6rem);margin:.3rem 0;text-transform:uppercase;letter-spacing:-.02em}
+.lead{color:var(--muted);margin:0 0 .4rem}
+main{max-width:900px;margin:auto;padding:0 1.2rem;display:grid;gap:1.4rem}
+.ex{background:var(--surface);border:1px solid var(--line);border-radius:1rem;overflow:hidden}
+.ex>h2{font-size:1.1rem;margin:0;padding:.9rem 1rem;border-bottom:1px solid var(--line)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.pane{background:var(--surface);padding:.7rem}
+.pane .tag{display:inline-block;font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+  padding:.25rem .55rem;border-radius:999px;margin-bottom:.5rem}
+.pane.old .tag{background:#2a3350;color:var(--muted)}
+.pane.new .tag{background:rgba(78,222,163,.16);color:var(--primary);border:1px solid #26694e}
+.pane img{width:100%;border-radius:.6rem;display:block;background:#0e1830}
+@media(max-width:560px){h1{font-size:1.7rem}}
+</style></head><body>
+<header>
+<div class="eyebrow">Prueba de diseño</div>
+<h1>Diagrama del campo</h1>
+<p class="lead">Comparativa del estilo <b>actual</b> frente al <b>nuevo</b> (pizarra táctica: líneas reales, arcos de esquina y, en los de tiro, área, punto de penalti y portería con red).</p>
+<p class="lead">Si te gusta el nuevo, se aplica a los 52 ejercicios. Esta página es solo una prueba.</p>
+</header>
+<main id="grid"></main>
+<script>
+const EX=[
+ ['IND-01 · Conducción en slalom','ind-01-conduccion-en-slalom'],
+ ['IND-15 · Caza de puertas','ind-15-caza-de-puertas'],
+ ['PAR-01 · Pase y sigue triangular','par-01-pase-y-sigue-triangular'],
+ ['IND-08 · Finalización tras recorte','ind-08-finalizacion-tras-recorte'],
+ ['IND-24 · Doble recorte y disparo','ind-24-doble-recorte-y-disparo'],
+ ['PAR-26 · Dos contra portero','par-26-dos-contra-portero'],
+];
+document.getElementById('grid').innerHTML=EX.map(([t,s])=>`<article class="ex"><h2>${t}</h2>
+<div class="pair">
+<div class="pane old"><span class="tag">Actual</span><img loading="lazy" src="webp/${s}.webp" alt="actual"></div>
+<div class="pane new"><span class="tag">Nuevo</span><img loading="lazy" src="webp-nuevo/${s}.webp" alt="nuevo"></div>
+</div></article>`).join('');
+</script>
+</body></html>
